@@ -10,10 +10,11 @@
         <p>Dirección de la editorial: {{ editorial.direccion }} </p>
         <p>Email: {{ editorial.email }} </p>
         <p>Fecha de fundación: {{ editorial.fecha_fundacion|date:'d/m/y' }} </p>
-        <p>Volver a la <a href="{% url 'books:editorial_list' %}">lista de editoriales</a>.</p>
+        <p><a href="{% url 'editorial:update' editorial.pk %}">Editar</a> - <a href="{% url 'editorial:delete' editorial.pk %}">Eliminar</a></p>
+        <p>Volver a la <a href="{% url 'editorial:list' %}">lista de editoriales</a>.</p>
     {% else %}
         <p>Editorial no encontrada</p>
-        <p>Puedes probar de nuevo en la <a href="{% url 'books:editorial_list' %}">lista de editoriales</a>.</p>
+        <p>Puedes probar de nuevo en la <a href="{% url 'editorial:list' %}">lista de editoriales</a>.</p>
     {% endif %}
 
 {% endblock %}

@@ -1,64 +1,44 @@
 from django.shortcuts import render, redirect
 from books.forms import EditorialCreate, EditorialModelFormCreate
 from books.models import Editorial
-from django.urls import reverse
+from django.urls import reverse, reverse_lazy
 from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 
 # Create your views here.
-class EditorialList(ListView):
+class EditorialListView(ListView):
     model = Editorial
-    template_name = 'editoriales/editoriales_ccbv.html'
+    template_name = 'editoriales/EditorialList.html'
     context_object_name = 'editoriales'
 
-class EditorialDetail(DetailView):
+
+class EditorialDetailView(DetailView):
     model = Editorial
-    template_name = 'editoriales/editorial_detail_ccbv.html'
-    context_objet_name = 'editorial'
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['titulo'] = f'Este es mi título personalizado para la editorial {self.object.nombre}'
-        return context
+    template_name = 'editoriales/EditorialDetail.html'
+    context_object_name = 'editorial'
 
 
-def editoriales_view(request):
+class EditorialCreateView(CreateView):
+    model = Editorial
+    template_name = 'editoriales/EditorialCreate.html'
+    success_url = reverse_lazy('editorial:list')
+    fields = [
+        'nombre', 'direccion', 'ciudad', 'estado', 'pais', 'codigo_postal', 'telefono', 'email', 'sitio_web', 'fecha_fundacion',
+    ]
 
-    editoriales = Editorial.objects.all()
 
-    context = {
-        'editoriales': editoriales,
-    }
+class EditorialUpdateView(UpdateView):
+    model = Editorial
+    template_name = 'editoriales/EditorialUpdate.html'
+    success_url = reverse_lazy('editorial:list')
+    fields = [
+        'nombre', 'direccion', 'ciudad', 'estado', 'pais', 'codigo_postal', 'telefono', 'email', 'sitio_web', 'fecha_fundacion',
+    ]
 
-    return render(request, 'editoriales/editoriales.html', context)
 
-def editorial_create(request):
-    if request.POST:
-        form = EditorialModelFormCreate(request.POST)
-        if form.is_valid():
-            nueva_editorial = Editorial.objects.create(
-                nombre=form.cleaned_data['nombre'],
-                direccion=form.cleaned_data['direccion'],
-                email=form.cleaned_data['email'],
-                fecha_fundacion=form.cleaned_data['fecha_fundacion'],
-            )
+class EditorialDeleteView(DeleteView):
+    model = Editorial
+    template_name = 'editoriales/EditorialDelete.html'
+    success_url = reverse_lazy('editorial:list')
 
-            # Redireccionar a la vista detalle de la nueva editorial creada
-            return redirect('books:editorial_detail', id=nueva_editorial.pk)
-            
-    else:
-        form = EditorialModelFormCreate()
-
-    context = {
-        'form': form,
-    }
-    return render(request, 'editoriales/editorial_create.html', context)
-
-def editorial_detail(request, id):
-
-    editorial = Editorial.objects.get(pk=id)    
-    context = {
-        'editorial': editorial,
-    }
-   
-    return render(request, 'editoriales/editorial_detail.html', context)

@@ -1,0 +1,18 @@
+{% extends 'general/layout.html' %}
+
+{% block head_title %}Página de Libros{% endblock%}
+{% block page_title %}Libros{% endblock%}
+
+{% block page_content %}
+    {% if libro %}
+        <h2>Nombre del libro: {{ libro.titulo }} </h2>
+        <p>ISBN: {{ libro.isbn }} </p>
+        <p>Fecha de publicación: {{ libro.fecha_publicacion|date:'d/m/y' }} </p>
+        <p>Número de páginas: {{ libro.numero_paginas }} </p>
+        <p>Volver a la <a href="{% url 'books:libros_list' %}">lista de libros</a>.</p>
+    {% else %}
+        <p>Libro no encontrado</p>
+        <p>Puedes probar de nuevo en la <a href="{% url 'books:libros_list' %}">lista de libros</a>.</p>
+    {% endif %}
+
+{% endblock %}

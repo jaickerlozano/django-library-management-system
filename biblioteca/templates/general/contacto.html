@@ -1,0 +1,13 @@
+{% extends 'general/layout.html' %}
+
+{% block head_title %}Página de contacto{% endblock%}
+{% block page_title %}Contacta con nosotros{% endblock%}
+
+{% block page_content %}
+    <form method="post">
+        {% csrf_token %}
+        {{ formulario.as_p }}
+        <button type="submit">Enviar</button>
+    </form>
+    <p>Escríbenos a <a href="mailto:jlozano.devcode@gmail.com">jlozano.devcode@gmail.com</a></p>
+{% endblock %}

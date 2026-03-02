@@ -9,5 +9,6 @@
         {% csrf_token %}
         {{ form.as_p }}
         <button type="submit">Actualizar Libro</button>
+        <a href="{% url 'libro:detail' libro.pk%}">Cancelar</a>
     </form>
 {% endblock %}

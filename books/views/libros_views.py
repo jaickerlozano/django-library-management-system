@@ -2,65 +2,45 @@ from django.shortcuts import render, redirect
 from django.urls import reverse, reverse_lazy
 from books.models import Libro
 from books.forms import LibroModelFormCreate
+from django.urls import reverse, reverse_lazy
+from django.views.generic.list import ListView
+from django.views.generic.detail import DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
-from django.views.generic import ListView, DetailView
 
 
 # Create your views here.
-def libros_view(request):
-
-    libros = Libro.objects.all()
-
-    context = {
-        'libros': libros,
-    }
-
-    return render(request, 'libros/libros.html', context)
-
-def libros_detail(request, id):
-
-    libro = Libro.objects.get(pk=id)    
-    context = {
-        'libro': libro,
-    }
-   
-    return render(request, 'libros/libro_detail.html', context)
-
-def libro_create(request):
-    if request.POST:
-        form = LibroModelFormCreate(request.POST)
-        if form.is_valid():
-            nuevo_libro = form.save()
-
-            # Redireccionar a la vista detalle del nuevo libro creado
-            return redirect('books:libro_detail', id=nuevo_libro.pk)
-            
-    else:
-        form = LibroModelFormCreate()
-
-    context = {
-        'form': form,
-    }
-    return render(request, 'libros/libro_create.html', context)
-
-class LibrosListView(ListView):
+class LibroListView(ListView):
     model = Libro
-    template_name = 'libros/libros.html'
+    template_name = 'libros/LibroList.html'
     context_object_name = 'libros'
+
+
+
+class LibroDetailView(DetailView):
+    model = Libro
+    template_name = 'libros/LibroDetail.html'
+    context_object_name = 'libro'
+
 
 class LibroCreateView(CreateView):
     model = Libro
-    fields = ['titulo', 'isbn', 'fecha_publicacion', 'numero_paginas',]
-    template_name = 'libros/libro_create.html'
-    success_url = reverse_lazy('books:libros_list')  # Redirige a la lista de libros después de crear uno nuevo
+    template_name = 'libros/LibroCreate.html'
+    success_url = reverse_lazy('libro:list')
+    fields = [
+        'titulo', 'isbn', 'fecha_publicacion', 'numero_paginas', 'portada', 'descripcion', 'editorial', 'autores', 'genero', 'precio',
+    ]
+
 
 class LibroUpdateView(UpdateView):
     model = Libro
-    fields = ['titulo', 'isbn', 'fecha_publicacion', 'numero_paginas',]
-    template_name = 'libros/libro_update.html'
-    success_url = reverse_lazy('books:libros_list')  # Redirige a la lista de libros después de crear uno nuevo
+    template_name = 'libros/LibroUpdate.html'
+    success_url = reverse_lazy('libro:list')
+    fields = [
+        'titulo', 'isbn', 'fecha_publicacion', 'numero_paginas', 'portada', 'descripcion', 'editorial', 'autores', 'genero', 'precio',
+    ]
+
 
 class LibroDeleteView(DeleteView):
     model = Libro
-    template_name = 'libros/libro_delete.html'
-    success_url = reverse_lazy('books:libros_list')  # Redirige a la lista de libros después de eliminar uno
+    template_name = 'libros/LibroDelete.html'
+    success_url = reverse_lazy('libro:list')

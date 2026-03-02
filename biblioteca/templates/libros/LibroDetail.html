@@ -9,10 +9,11 @@
         <p>ISBN: {{ libro.isbn }} </p>
         <p>Fecha de publicación: {{ libro.fecha_publicacion|date:'d/m/y' }} </p>
         <p>Número de páginas: {{ libro.numero_paginas }} </p>
-        <p>Volver a la <a href="{% url 'books:libros_list' %}">lista de libros</a>.</p>
+        <p><a href="{% url 'libro:update' libro.pk %}">Editar</a> - <a href="{% url 'libro:delete' libro.pk %}">Eliminar</a></p>
+        <p>Volver a la <a href="{% url 'libro:list' %}">lista de libros</a>.</p>
     {% else %}
         <p>Libro no encontrado</p>
-        <p>Puedes probar de nuevo en la <a href="{% url 'books:libros_list' %}">lista de libros</a>.</p>
+        <p>Puedes probar de nuevo en la <a href="{% url 'libro:list' %}">lista de libros</a>.</p>
     {% endif %}
 
 {% endblock %}

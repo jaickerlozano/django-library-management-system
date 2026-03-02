@@ -1,0 +1,15 @@
+{% extends 'general/layout.html' %}
+
+{% block head_title %}Página de Autores{% endblock%}
+{% block page_title %}Autores{% endblock%}
+
+{% block page_content %}
+    <h2>¿Eliminar Autor {{ autor.nombre }}?</h2>
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Eliminar Autor</button>
+        <a href="{% url 'autor:detail' autor.pk%}">Cancelar</a>
+    </form>
+
+{% endblock %}

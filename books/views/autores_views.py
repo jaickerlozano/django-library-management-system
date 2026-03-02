@@ -1,43 +1,44 @@
 from django.shortcuts import render
 from datetime import date
 from books.models import Autor
+from django.urls import reverse, reverse_lazy
+from django.views.generic.list import ListView
+from django.views.generic.detail import DetailView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 
 # Create your views here.
-def autores_view(request):
-    autores = Autor.objects.all() # -> Obtenemos todos los autores de la base de datos
+class AutorListView(ListView):
+    model = Autor
+    template_name = 'autores/AutorList.html'
+    context_object_name = 'autores'
 
-    context = {
-        'autores': autores,
-        'titulo': 'Esto es una prueba de contexto'
-    }
 
-    return render(request, 'autores/autores.html', context)
 
-def autor_detail(request, id):
-    autores = [
-        {
-            'id': 1,
-            'nombre': 'Gabriel',
-            'f_nac': date(1980, 8, 1)
-        },
-        {
-            'id': 2,
-            'nombre': 'Felipe',
-            'f_nac': date(1985,10, 1)
-        },
-        {
-            'id': 3,
-            'nombre': 'Isabel',
-            'f_nac': date(1990,11, 5)
-        }
+class AutorDetailView(DetailView):
+    model = Autor
+    template_name = 'autores/AutorDetail.html'
+    context_object_name = 'autor'
+
+
+class AutorCreateView(CreateView):
+    model = Autor
+    template_name = 'autores/AutorCreate.html'
+    success_url = reverse_lazy('autor:list')
+    fields = [
+        'nombre', 'apellido', 'fecha_nacimiento', 'nacionalidad', 'biografia', 'email', 'telefono', 'sitio_web', 'premios',
     ]
-    
-    context = {
-        'autor': None,
-    }
-    for autor in autores:
-        if autor['id'] == id:
-            context['autor'] = autor
-            break
 
-    return render(request, 'autores/autor_detail.html', context)
+
+class AutorUpdateView(UpdateView):
+    model = Autor
+    template_name = 'autores/AutorUpdate.html'
+    success_url = reverse_lazy('autor:list')
+    fields = [
+        'nombre', 'apellido', 'fecha_nacimiento', 'nacionalidad', 'biografia', 'email', 'telefono', 'sitio_web', 'premios',
+    ]
+
+
+class AutorDeleteView(DeleteView):
+    model = Autor
+    template_name = 'autores/AutorDelete.html'
+    success_url = reverse_lazy('autor:list')

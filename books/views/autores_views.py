@@ -5,6 +5,10 @@ from django.urls import reverse, reverse_lazy
 from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from django.contrib import messages
+from books.forms.autor_forms import AutorModelFormCreate
+from django.contrib.messages.views import SuccessMessageMixin
+
 
 # Create your views here.
 class AutorListView(ListView):
@@ -22,23 +26,34 @@ class AutorDetailView(DetailView):
 
 class AutorCreateView(CreateView):
     model = Autor
+    form_class = AutorModelFormCreate
     template_name = 'autores/AutorCreate.html'
     success_url = reverse_lazy('autor:list')
-    fields = [
-        'nombre', 'apellido', 'fecha_nacimiento', 'nacionalidad', 'biografia', 'email', 'telefono', 'sitio_web', 'premios',
-    ]
+
+    # Esto me sirve para tirar un mensaje global de éxito, el cual puede ser útil
+    def form_valid(self, form):
+        
+        messages.success(self.request, 'El autor se ha creado correctamente')
+        return super().form_valid(form)
+    
+    # Esto me sirve para tirar un mensaje global de error, el cual puede ser útil
+    def form_invalid(self, form):
+        messages.error(self.request, 'Hubo un error. Revisa los datos ingresados.')
+        return super().form_invalid(form)
 
 
-class AutorUpdateView(UpdateView):
+class AutorUpdateView(SuccessMessageMixin, UpdateView):
     model = Autor
+    form_class = AutorModelFormCreate
     template_name = 'autores/AutorUpdate.html'
     success_url = reverse_lazy('autor:list')
-    fields = [
-        'nombre', 'apellido', 'fecha_nacimiento', 'nacionalidad', 'biografia', 'email', 'telefono', 'sitio_web', 'premios',
-    ]
+    success_message = 'El autor se ha actualizado correctamente' # -> De esta forma es más limpio el código, pero solo funciona para enviar un mensaje de éxito... Si se quiere personalizar más mensajes es recomendable hacer una clase personalizada con SuccessMessagesMixin en otro fichero y luego importarlo
 
 
-class AutorDeleteView(DeleteView):
+class AutorDeleteView(SuccessMessageMixin, DeleteView):
     model = Autor
     template_name = 'autores/AutorDelete.html'
     success_url = reverse_lazy('autor:list')
+    success_message = 'El autor se ha eliminado correctamente'
+    
+

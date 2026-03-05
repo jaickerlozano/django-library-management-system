@@ -7,6 +7,10 @@
     <h2>Crear Nuevo Libro</h2>
     <form action="" method="post">
         {% csrf_token %}
+        {% if success_message %}
+            <div class="message success">{{ success_message }}</div>
+        {% endif %}
+
         {{ form.as_p }}
         <button type="submit">Crear Libro</button>
         <a href="{% url 'libro:list' %}">Cancelar</a>

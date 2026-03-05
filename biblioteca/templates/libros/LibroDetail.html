@@ -9,7 +9,12 @@
         <p>ISBN: {{ libro.isbn }} </p>
         <p>Fecha de publicación: {{ libro.fecha_publicacion|date:'d/m/y' }} </p>
         <p>Número de páginas: {{ libro.numero_paginas }} </p>
-        <p><a href="{% url 'libro:update' libro.pk %}">Editar</a> - <a href="{% url 'libro:delete' libro.pk %}">Eliminar</a></p>
+        <!-- En este bloque estoy validando que primero esté logueado el usuario para que puedan aparecer los botones de editar y eliminar -->
+        {% if user.is_authenticated %}
+            <p>
+                <a href="{% url 'libro:update' libro.pk %}">Editar</a> - <a href="{% url 'libro:delete' libro.pk %}">Eliminar</a>
+            </p>
+        {% endif %}
         <p>Volver a la <a href="{% url 'libro:list' %}">lista de libros</a>.</p>
     {% else %}
         <p>Libro no encontrado</p>

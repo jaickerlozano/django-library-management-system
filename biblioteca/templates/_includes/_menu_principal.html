@@ -5,4 +5,19 @@
         <li><a href="{% url 'editorial:list' %}">Editoriales</a></li>
         <li><a href="{% url 'search' %}">Buscar</a></li>
         <li><a href="{% url 'contacto' %}">Contacto</a></li>
+
+        {% if user.is_authenticated %}
+            <li>Usuario logueado: {{ user.username }}</li>
+        {% endif %}
     </ul>
+
+    <!-- Esta sección es para mostrar los mensajes usando messages de django-->
+    {% if messages %}
+        <section class="messages">
+            <ul>
+                {% for message in messages %}
+                    <li class="message {{ message.tags }}"> {{ message}} - Categoría: {{ message.tags }} </li>
+                {% endfor %}
+            </ul>
+        </section>
+    {% endif %}

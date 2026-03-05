@@ -6,6 +6,7 @@ from django.urls import reverse, reverse_lazy
 from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from django.contrib.messages.views import SuccessMessageMixin
 
 
 # Create your views here.
@@ -22,25 +23,23 @@ class LibroDetailView(DetailView):
     context_object_name = 'libro'
 
 
-class LibroCreateView(CreateView):
+class LibroCreateView(SuccessMessageMixin, CreateView):
     model = Libro
+    form_class = LibroModelFormCreate
     template_name = 'libros/LibroCreate.html'
     success_url = reverse_lazy('libro:list')
-    fields = [
-        'titulo', 'isbn', 'fecha_publicacion', 'numero_paginas', 'portada', 'descripcion', 'editorial', 'autores', 'genero', 'precio',
-    ]
+    success_message = 'El libro se ha creado correctamente'
 
-
-class LibroUpdateView(UpdateView):
+class LibroUpdateView(SuccessMessageMixin, UpdateView):
     model = Libro
+    form_class = LibroModelFormCreate
     template_name = 'libros/LibroUpdate.html'
     success_url = reverse_lazy('libro:list')
-    fields = [
-        'titulo', 'isbn', 'fecha_publicacion', 'numero_paginas', 'portada', 'descripcion', 'editorial', 'autores', 'genero', 'precio',
-    ]
+    success_message = 'El libro se ha actualizado correctamente'
 
-
-class LibroDeleteView(DeleteView):
+class LibroDeleteView(SuccessMessageMixin, DeleteView):
     model = Libro
     template_name = 'libros/LibroDelete.html'
     success_url = reverse_lazy('libro:list')
+    success_message = 'El libro se ha eliminado correctamente'
+

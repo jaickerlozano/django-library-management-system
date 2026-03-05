@@ -6,8 +6,8 @@ app_name = 'libro'
 
 urlpatterns = [
     path('list/', LibroListView.as_view(), name='list'),
-    path('detail/<pk>/', LibroDetailView.as_view(), name='detail'),
+    path('detail/<int:pk>/', LibroDetailView.as_view(), name='detail'),
     path('create/', LibroCreateView.as_view(), name='create'),
-    path('update/<pk>/', LibroUpdateView.as_view(), name='update'),
-    path('delete/<pk>/', LibroDeleteView.as_view(), name='delete'),
+    path('update/<int:pk>/', LibroUpdateView.as_view(), name='update'),
+    path('delete/<int:pk>/', LibroDeleteView.as_view(), name='delete'),
 ]

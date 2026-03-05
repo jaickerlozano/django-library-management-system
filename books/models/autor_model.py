@@ -4,6 +4,7 @@ from django.db import models
 class Autor(models.Model):
     nombre = models.CharField(max_length=200)
     apellido = models.CharField(max_length=200)
+    # Con error_messages lo que hago es que puedo personalizar los mensajes de error de los campos no válidos
     fecha_nacimiento = models.DateField()
     nacionalidad = models.CharField(max_length=100, null=True, blank=True)
     biografia = models.TextField(null=True, blank=True)

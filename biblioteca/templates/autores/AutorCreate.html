@@ -7,7 +7,13 @@
     <h2>Nuevo Autor</h2>
     <form action="" method="post">
         {% csrf_token %}
+        <div class="message error"> {{ form.fecha_nacimiento.errors }} </div>
         {{ form.as_p }}
+
+        {% comment %} {% if autor.fecha_nacimiento == 'invalid' %} {% endcomment %}
+            
+        {% comment %} {% endif %} {% endcomment %}
+
         <button type="submit">Crear Autor</button>
         <a href="{% url 'autor:list' %}">Cancelar</a>
     </form>

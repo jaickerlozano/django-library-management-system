@@ -8,6 +8,8 @@ from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.contrib import messages
 from books.forms.autor_forms import AutorModelFormCreate
 from django.contrib.messages.views import SuccessMessageMixin
+from django.contrib.auth.decorators import login_required
+from django.utils.decorators import method_decorator
 
 
 # Create your views here.
@@ -24,6 +26,7 @@ class AutorDetailView(DetailView):
     context_object_name = 'autor'
 
 
+@method_decorator(login_required, name="dispatch") # -> Este decorador bloquea la vista
 class AutorCreateView(CreateView):
     model = Autor
     form_class = AutorModelFormCreate
@@ -42,6 +45,7 @@ class AutorCreateView(CreateView):
         return super().form_invalid(form)
 
 
+@method_decorator(login_required, name="dispatch") # -> Este decorador bloquea la vista
 class AutorUpdateView(SuccessMessageMixin, UpdateView):
     model = Autor
     form_class = AutorModelFormCreate
@@ -50,6 +54,7 @@ class AutorUpdateView(SuccessMessageMixin, UpdateView):
     success_message = 'El autor se ha actualizado correctamente' # -> De esta forma es más limpio el código, pero solo funciona para enviar un mensaje de éxito... Si se quiere personalizar más mensajes es recomendable hacer una clase personalizada con SuccessMessagesMixin en otro fichero y luego importarlo
 
 
+@method_decorator(login_required, name="dispatch") # -> Este decorador bloquea la vista
 class AutorDeleteView(SuccessMessageMixin, DeleteView):
     model = Autor
     template_name = 'autores/AutorDelete.html'

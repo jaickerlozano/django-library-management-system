@@ -8,7 +8,12 @@
         <h2>Nombre del autor: {{ autor.nombre }} </h2>
         <p>ID del Autor: {{ autor.id }} </p>
         <p>Fecha de nacimiento: {{ autor.fecha_nacimiento|date:'d/m/y' }} </p>
-        <p><a href="{% url 'autor:update' autor.pk %}">Editar</a> - <a href="{% url 'autor:delete' autor.pk %}">Eliminar</a></p>
+        <!-- En este bloque estoy validando que primero esté logueado el usuario para que puedan aparecer los botones de editar y eliminar -->
+        {% if user.is_authenticated %}
+            <p>
+                <a href="{% url 'autor:update' autor.pk %}">Editar</a> - <a href="{% url 'autor:delete' autor.pk %}">Eliminar</a>
+            </p>
+        {% endif %}
         <p>Volver a la <a href="{% url 'autor:list' %}">lista de autores</a>.</p>
     {% else %}
         <p>Autor no encontrado</p>

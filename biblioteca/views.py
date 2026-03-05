@@ -2,9 +2,12 @@ from django.shortcuts import render # -> Necesario para usar el render en la fun
 from books.models import Autor, Libro, Editorial
 from books.forms import SearchForm
 from .form import ContactForm
+from django.contrib import messages # -> Necesario para mostrar mensajes por medio del método message
+ 
 
 # vistas generales de la aplicación
 def home_view(request):
+    messages.info(request, 'Bienvenido a la biblioteca')
     return render(request, 'general/home.html')    
 
 # def contact_view(request):
@@ -74,8 +77,9 @@ def contact_view(request):
 
             context = {
                 'formulario': formulario,
-                'success': True
             }
+
+            messages.info(request, 'El correo se ha enviado correctamente')
 
             print(f'Se ha enviado un correo a {nombre} procedente del email {email} con el siguiente mensaje: {mensaje}')
             return render(request, 'general/contacto.html', context)  

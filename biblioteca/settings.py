@@ -58,6 +58,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     "debug_toolbar.middleware.DebugToolbarMiddleware",
+    "books.custom_middleware.TiempoDeProcesamientoMiddleware",
 ]
 
 ROOT_URLCONF = 'biblioteca.urls'
@@ -73,6 +74,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'biblioteca.context_processor.get_current_year_context_processor',
+                'biblioteca.context_processor.get_stadistics_books',
             ],
         },
     },

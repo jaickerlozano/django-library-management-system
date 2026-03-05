@@ -10,7 +10,16 @@
         <p>Dirección de la editorial: {{ editorial.direccion }} </p>
         <p>Email: {{ editorial.email }} </p>
         <p>Fecha de fundación: {{ editorial.fecha_fundacion|date:'d/m/y' }} </p>
-        <p><a href="{% url 'editorial:update' editorial.pk %}">Editar</a> - <a href="{% url 'editorial:delete' editorial.pk %}">Eliminar</a></p>
+        <!-- En este bloque estoy validando si fue creado por el usuario para que puedan aparecer los botones de editar y eliminar. Sin embargo, la lógica de si me permite entrar o no la controla el decorador que hice en decorators.py y está insertado en editoriales_views.py-->
+        <p> 
+            {% if editorial.created_by == user %} 
+                <a href="{% url 'editorial:update' editorial.pk %}">Editar</a> 
+            {% endif %}
+
+            {% if editorial.created_by == user %} 
+                - <a href="{% url 'editorial:delete' editorial.pk %}">Eliminar</a>
+            {% endif %}
+        </p>
         <p>Volver a la <a href="{% url 'editorial:list' %}">lista de editoriales</a>.</p>
     {% else %}
         <p>Editorial no encontrada</p>

@@ -2,8 +2,8 @@ from django.db import models
 from .autor_model import Autor
 from .editorial_model import Editorial
 
-# Modelo para Libros
 class Libro(models.Model):
+    """Modelo que representa a un libro en el sistema."""
     titulo = models.CharField(max_length=300)
     isbn = models.CharField(max_length=13, unique=True)
     fecha_publicacion = models.DateField()
@@ -27,4 +27,5 @@ class Libro(models.Model):
     precio = models.DecimalField(max_digits=10, decimal_places=2, null=True, blank=True)
 
     def __str__(self):
+        """Devuelve la representación en cadena del libro (título)."""
         return self.titulo

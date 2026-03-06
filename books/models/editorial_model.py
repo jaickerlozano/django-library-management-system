@@ -1,7 +1,7 @@
 from django.db import models
 
-# Create your models here.
 class Editorial(models.Model):
+    """Modelo que representa a una editorial en el sistema."""
     nombre = models.CharField(max_length=200)
     direccion = models.CharField(max_length=300,null=True, blank=True)
     ciudad = models.CharField(max_length=100,null=True, blank=True)
@@ -14,4 +14,5 @@ class Editorial(models.Model):
     fecha_fundacion = models.DateField()
 
     def __str__(self):
+        """Devuelve la representación en cadena de la editorial (nombre)."""
         return self.nombre

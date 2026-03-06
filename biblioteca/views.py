@@ -3,6 +3,7 @@ from books.models import Autor, Libro, Editorial
 from books.forms import SearchForm
 from .form import ContactForm
 from django.contrib import messages # -> Necesario para mostrar mensajes por medio del método message
+from django.utils.translation import gettext as _
  
 
 # vistas generales de la aplicación
@@ -79,7 +80,7 @@ def contact_view(request):
                 'formulario': formulario,
             }
 
-            messages.info(request, 'El correo se ha enviado correctamente')
+            messages.info(request, _('El correo se ha enviado correctamente'))
 
             print(f'Se ha enviado un correo a {nombre} procedente del email {email} con el siguiente mensaje: {mensaje}')
             return render(request, 'general/contacto.html', context)  
@@ -96,3 +97,17 @@ def contact_view(request):
         'formulario': formulario
     }   
     return render(request, 'general/contacto.html', context)
+
+# Agrega esto en views.py para probar a Jules
+def registrar_prestamo_test(request):
+    libro_id = request.POST.get('libro_id')
+    usuario_id = request.POST.get('usuario_id')
+    
+    # Intencionalmente sin try-except para que Jules lo corrija
+    libro = Libro.objects.get(id=libro_id)
+    usuario = Usuario.objects.get(id=usuario_id)
+    
+    nuevo_prestamo = Prestamo(libro=libro, usuario=usuario)
+    nuevo_prestamo.save()
+    
+    return HttpResponse("Prestamo registrado")

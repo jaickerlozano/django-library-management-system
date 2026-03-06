@@ -1,3 +1,12 @@
+{% load i18n %} <!-- Esto es necesario para poder cargar la librería de i18n-->
+    <section>
+        <p> {% blocktrans %} Actualmente tenemos: {{ n_books }} Libros, {{ n_autor }} Autores, {{ n_editorial }} Editoriales {% endblocktrans %}</p>
+    </section>
+
+    <section>
+        <p>{% blocktrans %} Usuario logueado: {{ user_logged }} {% endblocktrans %}</p>
+    </section>
+    
     <footer>
-        <p>2026 - Conquer Blocks, Todos los derechos reservados</p>
+        <p> {% blocktrans %} Todos los derechos reservados {{ current_year }} - Conquer Blocks, Todos los derechos reservados  {% endblocktrans %} </p>
     </footer>

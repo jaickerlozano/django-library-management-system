@@ -1,24 +1,25 @@
 {% extends 'general/layout.html' %}
+{% load i18n %}
 
-{% block head_title %}Página de Libros{% endblock%}
-{% block page_title %}Libros{% endblock%}
+{% block head_title %}{% trans "Página de Libros" %}{% endblock%}
+{% block page_title %}{% trans "Libros" %}{% endblock%}
 
 {% block page_content %}
     {% if libro %}
-        <h2>Nombre del libro: {{ libro.titulo }} </h2>
-        <p>ISBN: {{ libro.isbn }} </p>
-        <p>Fecha de publicación: {{ libro.fecha_publicacion|date:'d/m/y' }} </p>
-        <p>Número de páginas: {{ libro.numero_paginas }} </p>
+        <h2>{% trans "Nombre del libro" %}: {{ libro.titulo }} </h2>
+        <p>{% trans "ISBN" %}: {{ libro.isbn }} </p>
+        <p>{% trans "Fecha de publicación" %}: {{ libro.fecha_publicacion|date:'d/m/y' }} </p>
+        <p>{% trans "Número de páginas" %}: {{ libro.numero_paginas }} </p>
         <!-- En este bloque estoy validando que primero esté logueado el usuario para que puedan aparecer los botones de editar y eliminar -->
         {% if user.is_authenticated %}
             <p>
-                <a href="{% url 'libro:update' libro.pk %}">Editar</a> - <a href="{% url 'libro:delete' libro.pk %}">Eliminar</a>
+                <a href="{% url 'libro:update' libro.pk %}">{% trans "Editar" %}</a> - <a href="{% url 'libro:delete' libro.pk %}">{% trans "Eliminar" %}</a>
             </p>
         {% endif %}
-        <p>Volver a la <a href="{% url 'libro:list' %}">lista de libros</a>.</p>
+        <p>{% trans "Volver a la" %} <a href="{% url 'libro:list' %}">{% trans "lista de libros" %}</a>.</p>
     {% else %}
-        <p>Libro no encontrado</p>
-        <p>Puedes probar de nuevo en la <a href="{% url 'libro:list' %}">lista de libros</a>.</p>
+        <p>{% trans "Libro no encontrado" %}</p>
+        <p>{% trans "Puedes probar de nuevo en la" %} <a href="{% url 'libro:list' %}">{% trans "lista de libros" %}</a>.</p>
     {% endif %}
 
 {% endblock %}

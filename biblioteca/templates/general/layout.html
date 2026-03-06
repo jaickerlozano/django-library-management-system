@@ -1,12 +1,39 @@
+{% load i18n %} <!-- Esto es necesario para poder cargar la librería de i18n-->
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> {% block head_title %}Título base{% endblock%} </title>
+    <title> {% block head_title %}{% trans "Título base" %}{% endblock%} </title>
+    <style>
+        .message {
+            background-color: #ccc;
+            color: black;
+            padding: 10px;
+        }           
+
+        .message.info {
+            background-color: blue;
+            color: white;
+        }
+
+        .message.success{
+            background-color: green;
+            color: white;
+        }
+
+        .message.warning {
+            background-color#32C95A;
+        }
+
+        .message.error {
+            background-color: red;
+            color: white;
+        }
+    </style>
 </head>
 <body>
-    <h1>{% block page_title %}Título base{% endblock%}</h1>
+    <h1>{% block page_title %}{% trans "Título base" %}{% endblock%}</h1>
 
     {% include '_includes/_menu_principal.html' %}
 
@@ -16,5 +43,13 @@
 
     {% include '_includes/_footer_principal.html' %}
     
+    <script>
+        setTimeout(function() {
+            const messages = document.querySelectorAll('.message');
+            messages.forEach(msg => {
+                msg.style.display = 'none';
+            });
+        }, 4000); // 4 segundos
+    </script>
 </body>
 </html>

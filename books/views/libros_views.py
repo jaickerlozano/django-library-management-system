@@ -7,6 +7,9 @@ from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.contrib.messages.views import SuccessMessageMixin
+from django.contrib.auth.decorators import login_required
+from django.utils.decorators import method_decorator
+
 
 
 # Create your views here.
@@ -23,6 +26,7 @@ class LibroDetailView(DetailView):
     context_object_name = 'libro'
 
 
+@method_decorator(login_required, name="dispatch") # -> Este decorador bloquea la vista
 class LibroCreateView(SuccessMessageMixin, CreateView):
     model = Libro
     form_class = LibroModelFormCreate
@@ -30,6 +34,8 @@ class LibroCreateView(SuccessMessageMixin, CreateView):
     success_url = reverse_lazy('libro:list')
     success_message = 'El libro se ha creado correctamente'
 
+
+@method_decorator(login_required, name="dispatch")
 class LibroUpdateView(SuccessMessageMixin, UpdateView):
     model = Libro
     form_class = LibroModelFormCreate
@@ -37,6 +43,8 @@ class LibroUpdateView(SuccessMessageMixin, UpdateView):
     success_url = reverse_lazy('libro:list')
     success_message = 'El libro se ha actualizado correctamente'
 
+
+@method_decorator(login_required, name="dispatch")
 class LibroDeleteView(SuccessMessageMixin, DeleteView):
     model = Libro
     template_name = 'libros/LibroDelete.html'

@@ -1,13 +1,14 @@
+{% load i18n %}
     <ul>
-        <li><a href="{% url 'home' %}">Inicio</a></li>
-        <li><a href="{% url 'autor:list' %}">Autores</a></li>
-        <li><a href="{% url 'libro:list' %}">Libros</a></li>
-        <li><a href="{% url 'editorial:list' %}">Editoriales</a></li>
-        <li><a href="{% url 'search' %}">Buscar</a></li>
-        <li><a href="{% url 'contacto' %}">Contacto</a></li>
+        <li><a href="{% url 'home' %}">{% trans 'Inicio' %}</a></li>
+        <li><a href="{% url 'autor:list' %}">{% trans "Autores" %}</a></li>
+        <li><a href="{% url 'libro:list' %}">{% trans "Libros" %}</a></li>
+        <li><a href="{% url 'editorial:list' %}">{% trans "Editoriales" %}</a></li>
+        <li><a href="{% url 'search' %}">{% trans "Buscar" %}</a></li>
+        <li><a href="{% url 'contacto' %}">{% trans "Contacto" %}</a></li>
 
         {% if user.is_authenticated %}
-            <li>Usuario logueado: {{ user.username }}</li>
+            <li>{% trans "Usuario logueado" %}: {{ user.username }}</li>
         {% endif %}
     </ul>
 
@@ -16,7 +17,7 @@
         <section class="messages">
             <ul>
                 {% for message in messages %}
-                    <li class="message {{ message.tags }}"> {{ message}} - Categoría: {{ message.tags }} </li>
+                    <li class="message {{ message.tags }}"> {{ message}} - {% trans "Categoría" %}: {{ message.tags }} </li>
                 {% endfor %}
             </ul>
         </section>

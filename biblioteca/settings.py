@@ -94,6 +94,10 @@ DATABASES = {
     }
 }
 
+# Definir la ruta donde se almacenarán los archivos de traducción
+LOCALE_PATHS = [
+    BASE_DIR / 'locale', # 'locale será la carpeta donde se guardarán las traducciones
+]
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
@@ -126,6 +130,13 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+
+# Definir las opciones de idiomas disponibles
+LANGUAGES = [
+    ('es', 'Español'),
+    ('en', 'Inglés'),
+    # Se puede añadir más idiomas según sea necesario
+]
 
 
 # Static files (CSS, JavaScript, Images)

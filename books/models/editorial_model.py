@@ -1,8 +1,8 @@
 from django.db import models
 from django.contrib.auth.models import User
 
-# Create your models here.
 class Editorial(models.Model):
+    """Modelo que representa a una editorial en el sistema."""
     nombre = models.CharField(max_length=200)
     direccion = models.CharField(max_length=300,null=True, blank=True)
     ciudad = models.CharField(max_length=100,null=True, blank=True)
@@ -16,4 +16,5 @@ class Editorial(models.Model):
     created_by = models.ForeignKey(User, null=True, blank=True, on_delete=models.SET_NULL)
 
     def __str__(self):
+        """Devuelve la representación en cadena de la editorial (nombre)."""
         return self.nombre

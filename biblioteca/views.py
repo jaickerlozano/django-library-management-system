@@ -71,3 +71,36 @@ def contact_view(request):
         'formulario': formulario
     }   
     return render(request, 'general/contacto.html', context)
+
+def registrar_prestamo_test(request):
+    """
+    Vista de prueba para registrar un préstamo en el sistema.
+
+    Recibe mediante POST el ID del libro y el ID del usuario, y crea un
+    nuevo registro de préstamo. Incluye manejo de errores para el caso
+    de que los IDs no se encuentren en la base de datos o existan otros
+    problemas al guardar el registro.
+    """
+    if request.method == "POST":
+        libro_id = request.POST.get('libro_id')
+        usuario_id = request.POST.get('usuario_id')
+
+        try:
+            # Buscar el libro y usuario en la base de datos
+            libro = Libro.objects.get(id=libro_id)
+            usuario = User.objects.get(id=usuario_id)
+
+            # Simulación de la creación de un nuevo préstamo ya que no existe el modelo Prestamo en el sistema
+            # nuevo_prestamo = Prestamo(libro=libro, usuario=usuario)
+            # nuevo_prestamo.save()
+
+            return HttpResponse("Préstamo registrado correctamente")
+
+        except Libro.DoesNotExist:
+            return HttpResponse("Error: El libro solicitado no existe", status=404)
+        except User.DoesNotExist:
+            return HttpResponse("Error: El usuario solicitado no existe", status=404)
+        except Exception as e:
+            return HttpResponse(f"Error interno del servidor: {str(e)}", status=500)
+
+    return HttpResponse("Método no permitido", status=405)

@@ -35,7 +35,7 @@ class AutorCreateView(CreateView):
 
     # Esto me sirve para tirar un mensaje global de éxito, el cual puede ser útil
     def form_valid(self, form):
-        
+
         messages.success(self.request, 'El autor se ha creado correctamente')
         return super().form_valid(form)
     

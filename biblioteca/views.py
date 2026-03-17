@@ -3,6 +3,14 @@ from books.models import Autor, Libro, Editorial
 from books.forms import SearchForm
 from .form import ContactForm
 from django.contrib import messages # Necesario para mostrar mensajes al usuario
+from django.contrib.auth.models import User
+from django.http import HttpResponse, HttpResponseRedirect
+from django.views import View
+from django.conf import settings
+from django.utils import translation
+from django.urls import resolve, reverse
+from django.utils.http import url_has_allowed_host_and_scheme
+from urllib.parse import urlparse
  
 
 def home_view(request):
@@ -104,3 +112,43 @@ def registrar_prestamo_test(request):
             return HttpResponse(f"Error interno del servidor: {str(e)}", status=500)
 
     return HttpResponse("Método no permitido", status=405)
+
+def translate_url(url, lang_code):
+    """
+    Traduce una URL al idioma especificado cambiando el prefijo de idioma.
+    Compatible con Django 3.2.
+    """
+    try:
+        # Parseamos la URL para separar path de query params
+        parsed = urlparse(url)
+        # Resolvemos la vista asociada al path
+        match = resolve(parsed.path)
+        # Forzamos el idioma y revertimos la URL
+        with translation.override(lang_code):
+            return reverse(match.view_name, args=match.args, kwargs=match.kwargs)
+    except:
+        return url
+
+class SetLanguageView(View):
+    """
+    Vista para cambiar el idioma de la sesión del usuario.
+    """
+    def post(self, request, *args, **kwargs):
+        language = request.POST.get('language')
+        next_url = request.POST.get('next', '/')
+
+        # Validación de seguridad para evitar Open Redirects
+        if not url_has_allowed_host_and_scheme(url=next_url, allowed_hosts={request.get_host()}):
+            next_url = '/'
+
+        if language and language in [lang[0] for lang in settings.LANGUAGES]:
+            # 1. Traducimos la URL para que tenga el prefijo del nuevo idioma (ej: /en/ -> /es/)
+            next_url = translate_url(next_url, language)
+
+            # 2. Activamos el idioma y preparamos la respuesta
+            translation.activate(language)
+            response = HttpResponseRedirect(next_url)
+            response.set_cookie(settings.LANGUAGE_COOKIE_NAME, language)
+            return response
+
+        return HttpResponseRedirect(next_url)

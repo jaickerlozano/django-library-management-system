@@ -2,6 +2,7 @@ from books.models import Editorial
 from django.http import Http404
 from django.core.exceptions import PermissionDenied
 
+# Esta función verifica si el pk existe y también comprueba que si 
 def user_can_delete_editorial(function):
     def wrap(request, *args, **kwargs):
         try:

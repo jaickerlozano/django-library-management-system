@@ -9,30 +9,32 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-03-17 09:17-0400\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2026-03-17 09:51-0400\n"
+"Last-Translator:   <jlozano.devcode@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? "
-"1 : 2;\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Translated-Using: django-rosetta 0.10.3\n"
 
 #: biblioteca/templates/_includes/_footer_principal.html:6
 #: biblioteca/templates/general/layout.html:49
 msgid "Biblioteca Virtual"
-msgstr "Biblioteca Virtual"
+msgstr "Virtual Library"
 
 #: biblioteca/templates/_includes/_footer_principal.html:7
 msgid ""
 "Tu portal para gestionar y descubrir libros, autores y editoriales de forma "
 "sencilla y eficiente."
 msgstr ""
+"Your portal to manage and discover books, authors and publishers in a simple"
+" and efficient way."
 
 #: biblioteca/templates/_includes/_footer_principal.html:11
 msgid "Estadísticas"
-msgstr "Estadísticas"
+msgstr "Statistics"
 
 #: biblioteca/templates/_includes/_footer_principal.html:13
 #: biblioteca/templates/_includes/_menu_principal.html:27
@@ -40,7 +42,7 @@ msgstr "Estadísticas"
 #: biblioteca/templates/general/search.html:59
 #: biblioteca/templates/libros/LibroList.html:4 books/models/libro_model.py:34
 msgid "Libros"
-msgstr "Libros"
+msgstr "Books"
 
 #: biblioteca/templates/_includes/_footer_principal.html:16
 #: biblioteca/templates/_includes/_menu_principal.html:22
@@ -49,7 +51,7 @@ msgstr "Libros"
 #: biblioteca/templates/general/search.html:37 books/models/autor_model.py:18
 #: books/models/libro_model.py:27
 msgid "Autores"
-msgstr "Autores"
+msgstr "Authors"
 
 #: biblioteca/templates/_includes/_footer_principal.html:19
 #: biblioteca/templates/_includes/_menu_principal.html:32
@@ -61,23 +63,23 @@ msgstr "Autores"
 #: biblioteca/templates/general/search.html:81
 #: books/models/editorial_model.py:34
 msgid "Editoriales"
-msgstr "Editoriales"
+msgstr "Editorials"
 
 #: biblioteca/templates/_includes/_footer_principal.html:24
 #: biblioteca/templates/_includes/_menu_principal.html:42
 #: biblioteca/templates/general/contacto.html:4
 msgid "Contacto"
-msgstr "Contacto"
+msgstr "Contact"
 
 #: biblioteca/templates/_includes/_footer_principal.html:29
 msgid "Sede Central, Digital"
-msgstr "Sede Central, Digital"
+msgstr "Headquarters, Digital"
 
 #: biblioteca/templates/_includes/_footer_principal.html:39
 #, python-format
 msgid ""
 " Todos los derechos reservados &copy; %(current_year)s - Conquer Blocks "
-msgstr ""
+msgstr "All rights reserved © %(current_year)s - Conquer Blocks"
 
 #: biblioteca/templates/_includes/_menu_principal.html:7
 #: biblioteca/templates/autores/AutorCreate.html:5
@@ -93,17 +95,17 @@ msgstr ""
 #: biblioteca/templates/libros/LibroCreate.html:5
 #: biblioteca/templates/libros/LibroList.html:4
 msgid "Biblioteca"
-msgstr "Biblioteca"
+msgstr "Library"
 
 #: biblioteca/templates/_includes/_menu_principal.html:17
 #: biblioteca/templates/general/home.html:4
 msgid "Inicio"
-msgstr "Inicio"
+msgstr "Home"
 
 #: biblioteca/templates/_includes/_menu_principal.html:37
 #: biblioteca/templates/general/search.html:19
 msgid "Buscar"
-msgstr "Buscar"
+msgstr "Search"
 
 #: biblioteca/templates/_includes/_menu_principal.html:78
 msgid "Login"
@@ -112,23 +114,23 @@ msgstr "Login"
 #: biblioteca/templates/autores/AutorCreate.html:5
 #: biblioteca/templates/autores/AutorList.html:12
 msgid "Nuevo Autor"
-msgstr "Nuevo Autor"
+msgstr "New Author"
 
 #: biblioteca/templates/autores/AutorCreate.html:6
 msgid "Gestión de Autores"
-msgstr "Gestión de Autores"
+msgstr "Author Management"
 
 #: biblioteca/templates/autores/AutorCreate.html:13
 msgid "Registrar Nuevo Autor"
-msgstr "Registrar Nuevo Autor"
+msgstr "Register New Author"
 
 #: biblioteca/templates/autores/AutorCreate.html:21
 msgid "Por favor corrija los errores abajo."
-msgstr "Por favor corrija los errores abajo."
+msgstr "Please correct the errors below."
 
 #: biblioteca/templates/autores/AutorCreate.html:29
 msgid "Crear Autor"
-msgstr "Crear Autor"
+msgstr "Create Author"
 
 #: biblioteca/templates/autores/AutorCreate.html:32
 #: biblioteca/templates/autores/AutorUpdate.html:26
@@ -138,156 +140,162 @@ msgstr "Crear Autor"
 #: biblioteca/templates/libros/LibroCreate.html:34
 #: biblioteca/templates/libros/LibroUpdate.html:23
 msgid "Cancelar"
-msgstr "Cancelar"
+msgstr "Cancel"
 
 #: biblioteca/templates/autores/AutorDelete.html:4
 msgid "Eliminar Autor"
-msgstr "Eliminar Autor"
+msgstr "Delete Author"
 
 #: biblioteca/templates/autores/AutorDelete.html:5
 #: biblioteca/templates/libros/LibroDelete.html:5
 #: biblioteca/templates/libros/LibroDelete.html:24
 msgid "Confirmar Eliminación"
-msgstr "Confirmar Eliminación"
+msgstr "Confirm Deletion"
 
 #: biblioteca/templates/autores/AutorDelete.html:15
 msgid "¿Está seguro?"
-msgstr "¿Está seguro?"
+msgstr "Are you sure?"
 
 #: biblioteca/templates/autores/AutorDelete.html:17
 #, python-format
 msgid ""
-" Está a punto de eliminar permanentemente al autor <strong>%(autor.nombre)s</"
-"strong> de la base de datos. Esta acción no se puede deshacer. "
+" Está a punto de eliminar permanentemente al autor "
+"<strong>%(autor.nombre)s</strong> de la base de datos. Esta acción no se "
+"puede deshacer. "
 msgstr ""
+"You are about to permanently delete the author "
+"<strong>%(autor.nombre)s</strong> from the database. This action cannot be "
+"undone."
 
 #: biblioteca/templates/autores/AutorDelete.html:24
 msgid "Sí, Eliminar Autor"
-msgstr "Sí, Eliminar Autor"
+msgstr "Yes, Remove Author"
 
 #: biblioteca/templates/autores/AutorDelete.html:27
 msgid "No, Mantener Autor"
-msgstr "No, Mantener Autor"
+msgstr "No, Keep Author"
 
 #: biblioteca/templates/autores/AutorDetail.html:4
 #: books/models/autor_model.py:17
 msgid "Autor"
-msgstr "Autor"
+msgstr "Author"
 
 #: biblioteca/templates/autores/AutorDetail.html:5
 msgid "Detalle del Autor"
-msgstr "Detalle del Autor"
+msgstr "Author Details"
 
 #: biblioteca/templates/autores/AutorDetail.html:23
 #: books/models/autor_model.py:8
 msgid "Fecha de nacimiento"
-msgstr "Fecha de nacimiento"
+msgstr "Birth Date"
 
 #: biblioteca/templates/autores/AutorDetail.html:27
 msgid "Libros registrados"
-msgstr "Libros registrados"
+msgstr "Registered books"
 
 #: biblioteca/templates/autores/AutorDetail.html:36
 #: biblioteca/templates/editoriales/EditorialDetail.html:44
 #: biblioteca/templates/libros/LibroDetail.html:73
 msgid "Editar"
-msgstr "Editar"
+msgstr "Edit"
 
 #: biblioteca/templates/autores/AutorDetail.html:39
 #: biblioteca/templates/editoriales/EditorialDetail.html:47
 #: biblioteca/templates/libros/LibroDetail.html:76
 msgid "Eliminar"
-msgstr "Eliminar"
+msgstr "Eliminate"
 
 #: biblioteca/templates/autores/AutorDetail.html:44
 #: biblioteca/templates/autores/AutorDetail.html:54
 #: biblioteca/templates/editoriales/EditorialDetail.html:64
 msgid "Volver a la lista"
-msgstr "Volver a la lista"
+msgstr "Back to list"
 
 #: biblioteca/templates/autores/AutorDetail.html:51
 msgid "Autor no encontrado"
-msgstr "Autor no encontrado"
+msgstr "Author not found"
 
 #: biblioteca/templates/autores/AutorDetail.html:52
 msgid "Lo sentimos, el autor que buscas no existe o ha sido eliminado."
-msgstr "Lo sentimos, el autor que buscas no existe o ha sido eliminado."
+msgstr ""
+"We're sorry, the author you're looking for doesn't exist or has been "
+"removed."
 
 #: biblioteca/templates/autores/AutorList.html:5
 msgid "Nuestros Autores"
-msgstr "Nuestros Autores"
+msgstr "Our Authors"
 
 #: biblioteca/templates/autores/AutorList.html:9
 msgid "Explora la lista completa"
-msgstr "Explora la lista completa"
+msgstr "Explore the full list"
 
 #: biblioteca/templates/autores/AutorList.html:35
 msgid "Detalles"
-msgstr "Detalles"
+msgstr "Details"
 
 #: biblioteca/templates/autores/AutorList.html:48
 msgid "No hay autores registrados en este momento."
-msgstr "No hay autores registrados en este momento."
+msgstr "There are no registered authors at this time."
 
 #: biblioteca/templates/autores/AutorUpdate.html:5
 msgid "Editar Autor"
-msgstr "Editar Autor"
+msgstr "Edit Author"
 
 #: biblioteca/templates/autores/AutorUpdate.html:6
 #: biblioteca/templates/autores/AutorUpdate.html:23
 msgid "Actualizar Autor"
-msgstr "Actualizar Autor"
+msgstr "Update Author"
 
 #: biblioteca/templates/autores/AutorUpdate.html:13
 msgid "Modificar Datos del Autor"
-msgstr "Modificar Datos del Autor"
+msgstr "Modify Author Data"
 
 #: biblioteca/templates/editoriales/EditorialCreate.html:5
 #: biblioteca/templates/editoriales/EditorialCreate.html:25
 msgid "Crear Editorial"
-msgstr "Crear Editorial"
+msgstr "Create Publisher"
 
 #: biblioteca/templates/editoriales/EditorialCreate.html:9
 #: biblioteca/templates/editoriales/EditorialList.html:12
 msgid "Nueva Editorial"
-msgstr "Nueva Editorial"
+msgstr "New Publisher"
 
 #: biblioteca/templates/editoriales/EditorialDelete.html:4
 #: biblioteca/templates/editoriales/EditorialDelete.html:12
 msgid "Eliminar Editorial"
-msgstr "Eliminar Editorial"
+msgstr "Delete Publisher"
 
 #: biblioteca/templates/editoriales/EditorialDelete.html:8
 #, python-format
 msgid "¿Eliminar Editorial %(nombre)s?"
-msgstr "¿Eliminar Editorial %(nombre)s?"
+msgstr "Delete Publisher %(nombre)s?"
 
 #: biblioteca/templates/editoriales/EditorialDelete.html:11
 msgid "Esta acción no se puede deshacer."
-msgstr "Esta acción no se puede deshacer."
+msgstr "This action cannot be undone."
 
 #: biblioteca/templates/editoriales/EditorialDetail.html:4
 #: biblioteca/templates/libros/LibroDetail.html:58
 #: books/models/editorial_model.py:33 books/models/libro_model.py:26
 msgid "Editorial"
-msgstr "Editorial"
+msgstr "Publisher"
 
 #: biblioteca/templates/editoriales/EditorialDetail.html:5
 msgid "Perfil de la Editorial"
-msgstr "Perfil de la Editorial"
+msgstr "Publisher Profile"
 
 #: biblioteca/templates/editoriales/EditorialDetail.html:19
 msgid "Fundada en"
-msgstr "Fundada en"
+msgstr "Founded in"
 
 #: biblioteca/templates/editoriales/EditorialDetail.html:26
 msgid "Información de Contacto"
-msgstr "Información de Contacto"
+msgstr "Contact Information"
 
 #: biblioteca/templates/editoriales/EditorialDetail.html:27
 #: books/forms/editorial_forms.py:11 books/models/editorial_model.py:8
 msgid "Dirección"
-msgstr "Dirección"
+msgstr "Address"
 
 #: biblioteca/templates/editoriales/EditorialDetail.html:28
 #: books/forms/editorial_forms.py:17 books/models/autor_model.py:11
@@ -297,78 +305,78 @@ msgstr "Email"
 
 #: biblioteca/templates/editoriales/EditorialDetail.html:30
 msgid "Sitio Web"
-msgstr "Sitio Web"
+msgstr "Website"
 
 #: biblioteca/templates/editoriales/EditorialDetail.html:35
 msgid "Detalles Adicionales"
-msgstr "Detalles Adicionales"
+msgstr "Additional Details"
 
 #: biblioteca/templates/editoriales/EditorialDetail.html:36
 #: books/forms/editorial_forms.py:19 books/models/editorial_model.py:16
 msgid "Fecha de fundación"
-msgstr "Fecha de fundación"
+msgstr "Foundation Date"
 
 #: biblioteca/templates/editoriales/EditorialDetail.html:37
 #: books/models/editorial_model.py:29
 msgid "Nivel"
-msgstr "Nivel"
+msgstr "Level"
 
 #: biblioteca/templates/editoriales/EditorialDetail.html:51
 msgid "Volver"
-msgstr "Volver"
+msgstr "Return"
 
 #: biblioteca/templates/editoriales/EditorialDetail.html:56
 msgid "Registrado por"
-msgstr "Registrado por"
+msgstr "Registered by"
 
 #: biblioteca/templates/editoriales/EditorialDetail.html:61
 msgid "Editorial no encontrada"
-msgstr "Editorial no encontrada"
+msgstr "Publisher not found"
 
 #: biblioteca/templates/editoriales/EditorialDetail.html:62
 msgid "La editorial que intenta visualizar no existe."
-msgstr "La editorial que intenta visualizar no existe."
+msgstr "The publishing house you are trying to visualize does not exist."
 
 #: biblioteca/templates/editoriales/EditorialList.html:5
 msgid "Nuestras Editoriales"
-msgstr "Nuestras Editoriales"
+msgstr "Our Publishers"
 
 #: biblioteca/templates/editoriales/EditorialList.html:9
 msgid "Socios Editoriales"
-msgstr "Socios Editoriales"
+msgstr "Editorial Partners"
 
 #: biblioteca/templates/editoriales/EditorialList.html:35
 msgid "Ver Perfil"
-msgstr "Ver Perfil"
+msgstr "View Profile"
 
 #: biblioteca/templates/editoriales/EditorialList.html:43
 msgid "No hay editoriales registradas."
-msgstr "No hay editoriales registradas."
+msgstr "There are no registered publishers."
 
 #: biblioteca/templates/editoriales/EditorialUpdate.html:4
 #: biblioteca/templates/editoriales/EditorialUpdate.html:8
 msgid "Editar Editorial"
-msgstr "Editar Editorial"
+msgstr "Edit Publisher"
 
 #: biblioteca/templates/editoriales/EditorialUpdate.html:12
 msgid "Actualizar Editorial"
-msgstr "Actualizar Editorial"
+msgstr "Update Publisher"
 
 #: biblioteca/templates/general/contacto.html:5
 msgid "Contacta con nosotros"
-msgstr "Contacta con nosotros"
+msgstr "Contact us"
 
 #: biblioteca/templates/general/contacto.html:11
 msgid "Enviar"
-msgstr "Enviar"
+msgstr "Send"
 
 #: biblioteca/templates/general/contacto.html:13
 msgid "Escríbenos a"
-msgstr "Escríbenos a"
+msgstr "Write to us at"
 
 #: biblioteca/templates/general/home.html:5
 msgid "Bienvenido a la Biblioteca"
-msgstr "Bienvenido a la Biblioteca"
+msgstr "Welcome to the Library"
 
 #: biblioteca/templates/general/home.html:17
 msgid ""
@@ -377,15 +385,15 @@ msgstr ""
 
 #: biblioteca/templates/general/home.html:18
 msgid "Ver Libros"
-msgstr "Ver Libros"
+msgstr ""
 
 #: biblioteca/templates/general/home.html:31
 msgid "Conoce a las mentes brillantes detrás de tus historias favoritas."
-msgstr "Conoce a las mentes brillantes detrás de tus historias favoritas."
+msgstr ""
 
 #: biblioteca/templates/general/home.html:32
 msgid "Ver Autores"
-msgstr "Ver Autores"
+msgstr ""
 
 #: biblioteca/templates/general/home.html:45
 msgid ""
@@ -395,11 +403,11 @@ msgstr ""
 
 #: biblioteca/templates/general/home.html:46
 msgid "Ver Editoriales"
-msgstr "Ver Editoriales"
+msgstr ""
 
 #: biblioteca/templates/general/home.html:55
 msgid "¿Buscas algo en específico?"
-msgstr "¿Buscas algo en específico?"
+msgstr ""
 
 #: biblioteca/templates/general/home.html:56
 msgid ""
@@ -409,85 +417,85 @@ msgstr ""
 
 #: biblioteca/templates/general/home.html:58
 msgid "Ir a Búsqueda"
-msgstr "Ir a Búsqueda"
+msgstr ""
 
 #: biblioteca/templates/general/search.html:5
 msgid "Búsqueda"
-msgstr "Búsqueda"
+msgstr ""
 
 #: biblioteca/templates/general/search.html:6
 msgid "Buscador de Biblioteca"
-msgstr "Buscador de Biblioteca"
+msgstr ""
 
 #: biblioteca/templates/general/search.html:30
 msgid "Resultados para"
-msgstr "Resultados para"
+msgstr ""
 
 #: biblioteca/templates/general/search.html:49
 msgid "No se encontraron autores."
-msgstr "No se encontraron autores."
+msgstr ""
 
 #: biblioteca/templates/general/search.html:71
 msgid "No se encontraron libros."
-msgstr "No se encontraron libros."
+msgstr ""
 
 #: biblioteca/templates/general/search.html:93
 msgid "No se encontraron editoriales."
-msgstr "No se encontraron editoriales."
+msgstr ""
 
 #: biblioteca/templates/libros/LibroCreate.html:5
 #: biblioteca/templates/libros/LibroList.html:12
 msgid "Nuevo Libro"
-msgstr "Nuevo Libro"
+msgstr ""
 
 #: biblioteca/templates/libros/LibroCreate.html:6
 msgid "Gestión de Catálogo"
-msgstr "Gestión de Catálogo"
+msgstr ""
 
 #: biblioteca/templates/libros/LibroCreate.html:13
 msgid "Registrar Nuevo Libro"
-msgstr "Registrar Nuevo Libro"
+msgstr ""
 
 #: biblioteca/templates/libros/LibroCreate.html:37
 msgid "Crear Libro"
-msgstr "Crear Libro"
+msgstr ""
 
 #: biblioteca/templates/libros/LibroDelete.html:4
 msgid "Eliminar Libro"
-msgstr "Eliminar Libro"
+msgstr ""
 
 #: biblioteca/templates/libros/LibroDelete.html:15
 msgid "¿Retirar libro del catálogo?"
-msgstr "¿Retirar libro del catálogo?"
+msgstr ""
 
 #: biblioteca/templates/libros/LibroDelete.html:17
 #, python-format
 msgid ""
-" Está a punto de eliminar permanentemente <strong>%(libro.titulo)s</strong>. "
-"Esta acción no se puede deshacer y el registro desaparecerá de la base de "
+" Está a punto de eliminar permanentemente <strong>%(libro.titulo)s</strong>."
+" Esta acción no se puede deshacer y el registro desaparecerá de la base de "
 "datos. "
 msgstr ""
 
 #: biblioteca/templates/libros/LibroDelete.html:27
 msgid "Cancelar y Volver"
-msgstr "Cancelar y Volver"
+msgstr ""
 
 #: biblioteca/templates/libros/LibroDetail.html:4
 msgid "Detalle de Libro"
-msgstr "Detalle de Libro"
+msgstr ""
 
 #: biblioteca/templates/libros/LibroDetail.html:5
 msgid "Información del Libro"
-msgstr "Información del Libro"
+msgstr ""
 
 #: biblioteca/templates/libros/LibroDetail.html:31
 #: biblioteca/templates/libros/LibroList.html:23
 msgid "Agotado"
-msgstr "Agotado"
+msgstr ""
 
 #: biblioteca/templates/libros/LibroDetail.html:33
 msgid "En Stock"
-msgstr "En Stock"
+msgstr ""
 
 #: biblioteca/templates/libros/LibroDetail.html:40
 #: books/models/libro_model.py:9
@@ -497,295 +505,296 @@ msgstr "ISBN"
 #: biblioteca/templates/libros/LibroDetail.html:46
 #: books/models/libro_model.py:10
 msgid "Fecha de publicación"
-msgstr "Fecha de publicación"
+msgstr "Publication Date"
 
 #: biblioteca/templates/libros/LibroDetail.html:52
 #: books/models/libro_model.py:11
 msgid "Número de páginas"
-msgstr "Número de páginas"
+msgstr "Number of pages"
 
 #: biblioteca/templates/libros/LibroDetail.html:63
 msgid "N/A"
-msgstr "N/A"
+msgstr ""
 
 #: biblioteca/templates/libros/LibroDetail.html:80
 msgid "Volver al catálogo"
-msgstr "Volver al catálogo"
+msgstr ""
 
 #: biblioteca/templates/libros/LibroDetail.html:89
 msgid "Libro no encontrado"
-msgstr "Libro no encontrado"
+msgstr ""
 
 #: biblioteca/templates/libros/LibroDetail.html:90
 msgid ""
-"Lo sentimos, el ejemplar solicitado no se encuentra en nuestra base de datos."
+"Lo sentimos, el ejemplar solicitado no se encuentra en nuestra base de "
+"datos."
 msgstr ""
 
 #: biblioteca/templates/libros/LibroDetail.html:92
 msgid "Ir al catálogo"
-msgstr "Ir al catálogo"
+msgstr ""
 
 #: biblioteca/templates/libros/LibroList.html:5
 msgid "Catálogo de Libros"
-msgstr "Catálogo de Libros"
+msgstr ""
 
 #: biblioteca/templates/libros/LibroList.html:9
 msgid "Nuestra Colección"
-msgstr "Nuestra Colección"
+msgstr ""
 
 #: biblioteca/templates/libros/LibroList.html:25
 msgid "Disponible"
-msgstr "Disponible"
+msgstr ""
 
 #: biblioteca/templates/libros/LibroList.html:42
 msgid "pág."
-msgstr "pág."
+msgstr ""
 
 #: biblioteca/templates/libros/LibroList.html:48
 msgid "Ver detalles"
-msgstr "Ver detalles"
+msgstr ""
 
 #: biblioteca/templates/libros/LibroList.html:58
 msgid "No se encontraron libros en el catálogo."
-msgstr "No se encontraron libros en el catálogo."
+msgstr ""
 
 #: biblioteca/templates/libros/LibroUpdate.html:5
 msgid "Editar Libro"
-msgstr "Editar Libro"
+msgstr ""
 
 #: biblioteca/templates/libros/LibroUpdate.html:6
 msgid "Actualizar Información"
-msgstr "Actualizar Información"
+msgstr ""
 
 #: biblioteca/templates/libros/LibroUpdate.html:13
 msgid "Modificar Detalles del Libro"
-msgstr "Modificar Detalles del Libro"
+msgstr ""
 
 #: biblioteca/templates/libros/LibroUpdate.html:26
 msgid "Actualizar Libro"
-msgstr "Actualizar Libro"
+msgstr ""
 
 #: books/forms/autor_forms.py:17
 msgid "Formato incorrecto. Usa DD/MM/AAAA."
-msgstr "Formato incorrecto. Usa DD/MM/AAAA."
+msgstr ""
 
 #: books/forms/editorial_forms.py:10 books/models/autor_model.py:6
 #: books/models/editorial_model.py:7
 msgid "Nombre"
-msgstr "Nombre"
+msgstr "Name"
 
 #: books/forms/editorial_forms.py:12 books/models/editorial_model.py:9
 msgid "Ciudad"
-msgstr "Ciudad"
+msgstr "City"
 
 #: books/forms/editorial_forms.py:13 books/models/editorial_model.py:10
 msgid "Estado"
-msgstr "Estado"
+msgstr "State"
 
 #: books/forms/editorial_forms.py:14 books/models/editorial_model.py:11
 msgid "País"
-msgstr "País"
+msgstr "Country"
 
 #: books/forms/editorial_forms.py:15 books/models/editorial_model.py:12
 msgid "Código Postal"
-msgstr "Código Postal"
+msgstr "Zip Code"
 
 #: books/forms/editorial_forms.py:16 books/models/autor_model.py:12
 #: books/models/editorial_model.py:13
 msgid "Teléfono"
-msgstr "Teléfono"
+msgstr "Phone"
 
 #: books/forms/editorial_forms.py:18 books/models/autor_model.py:13
 #: books/models/editorial_model.py:15
 msgid "Sitio web"
-msgstr "Sitio web"
+msgstr "Website"
 
 #: books/forms/editorial_forms.py:24
 msgid "El nombre debe tener al menos 5 caracteres."
-msgstr "El nombre debe tener al menos 5 caracteres."
+msgstr ""
 
 #: books/forms/libro_forms.py:16
 msgid "Ingrese el título del libro."
-msgstr "Ingrese el título del libro."
+msgstr ""
 
 #: books/forms/libro_forms.py:17
 msgid "Seleccione la fecha de publicación del libro."
-msgstr "Seleccione la fecha de publicación del libro."
+msgstr ""
 
 #: books/forms/libro_forms.py:18
 msgid "Ingrese el número de páginas del libro."
-msgstr "Ingrese el número de páginas del libro."
+msgstr ""
 
 #: books/forms/libro_forms.py:24
 msgid "El título debe tener al menos 5 caracteres."
-msgstr "El título debe tener al menos 5 caracteres."
+msgstr ""
 
 #: books/models/autor_model.py:7
 msgid "Apellido"
-msgstr "Apellido"
+msgstr "Last Name"
 
 #: books/models/autor_model.py:9
 msgid "Nacionalidad"
-msgstr "Nacionalidad"
+msgstr "Nationality"
 
 #: books/models/autor_model.py:10
 msgid "Biografía"
-msgstr "Biografía"
+msgstr "Biography"
 
 #: books/models/autor_model.py:14
 msgid "Premios"
-msgstr "Premios"
+msgstr "Awards"
 
 #: books/models/editorial_model.py:17
 msgid "Creado por"
-msgstr "Creado por"
+msgstr "Created by"
 
 #: books/models/editorial_model.py:20
 msgid "Nivel 1"
-msgstr "Nivel 1"
+msgstr "Level 1"
 
 #: books/models/editorial_model.py:21
 msgid "Nivel 2"
-msgstr "Nivel 2"
+msgstr "Level 2"
 
 #: books/models/editorial_model.py:22
 msgid "Nivel 3"
-msgstr "Nivel 3"
+msgstr "Level 3"
 
 #: books/models/libro_model.py:8
 msgid "Título"
-msgstr "Título"
+msgstr "Title"
 
 #: books/models/libro_model.py:14
 msgid "Español"
-msgstr "Español"
+msgstr "Spanish"
 
 #: books/models/libro_model.py:15
 msgid "Inglés"
-msgstr "Inglés"
+msgstr "English"
 
 #: books/models/libro_model.py:22
 msgid "Idioma"
-msgstr "Idioma"
+msgstr "Language"
 
 #: books/models/libro_model.py:24
 msgid "Portada"
-msgstr "Portada"
+msgstr "Cover"
 
 #: books/models/libro_model.py:25
 msgid "Descripción"
-msgstr "Descripción"
+msgstr "Description"
 
 #: books/models/libro_model.py:28
 msgid "Género"
-msgstr "Género"
+msgstr "Genre"
 
 #: books/models/libro_model.py:29
 msgid "Precio"
-msgstr "Precio"
+msgstr "Price"
 
 #: books/models/libro_model.py:30
 msgid "Está fuera de stock"
-msgstr "Está fuera de stock"
+msgstr "Out of stock"
 
 #: books/models/libro_model.py:33
 msgid "Libro"
-msgstr "Libro"
+msgstr "Book"
 
 #: books/views/autores_views.py:42
 msgid "El autor se ha creado correctamente"
-msgstr "El autor se ha creado correctamente"
+msgstr "The author has been created successfully"
 
 #: books/views/autores_views.py:48
 msgid "Hubo un error. Revisa los datos ingresados."
-msgstr "Hubo un error. Revisa los datos ingresados."
+msgstr "An error occurred. Please check the input data."
 
 #: books/views/autores_views.py:59
 msgid "El autor se ha actualizado correctamente"
-msgstr "El autor se ha actualizado correctamente"
+msgstr "The author has been updated successfully"
 
 #: books/views/autores_views.py:68
 msgid "El autor se ha eliminado correctamente"
-msgstr "El autor se ha eliminado correctamente"
+msgstr "The author has been deleted successfully"
 
 #: books/views/editoriales_views.py:35
 msgid "La editorial se ha creado correctamente"
-msgstr "La editorial se ha creado correctamente"
+msgstr "The publisher has been created successfully"
 
 #: books/views/editoriales_views.py:52
 msgid "La editorial se ha actualizado correctamente"
-msgstr "La editorial se ha actualizado correctamente"
+msgstr "The publisher has been updated successfully"
 
 #: books/views/editoriales_views.py:60
 msgid "La editorial se ha eliminado correctamente"
-msgstr "La editorial se ha eliminado correctamente"
+msgstr "The publisher has been deleted successfully"
 
 #: books/views/libros_views.py:37
 msgid "El libro se ha creado correctamente"
-msgstr "El libro se ha creado correctamente"
+msgstr "The book has been created successfully"
 
 #: books/views/libros_views.py:47
 msgid "El libro se ha actualizado correctamente"
-msgstr "El libro se ha actualizado correctamente"
+msgstr "The book has been updated successfully"
 
 #: books/views/libros_views.py:56
 msgid "El libro se ha eliminado correctamente"
-msgstr "El libro se ha eliminado correctamente"
+msgstr "The book has been deleted successfully"
 
 #: env/lib/python3.10/site-packages/django/contrib/messages/apps.py:16
 msgid "Messages"
-msgstr "Messages"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/contrib/sitemaps/apps.py:8
 msgid "Site Maps"
-msgstr "Site Maps"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/contrib/staticfiles/apps.py:9
 msgid "Static Files"
-msgstr "Static Files"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/contrib/syndication/apps.py:7
 msgid "Syndication"
-msgstr "Syndication"
+msgstr ""
 
 #. Translators: String used to replace omitted page numbers in elided page
 #. range generated by paginators, e.g. [1, 2, '…', 5, 6, 7, '…', 9, 10].
 #: env/lib/python3.10/site-packages/django/core/paginator.py:30
 msgid "…"
-msgstr "…"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/core/paginator.py:32
 msgid "That page number is not an integer"
-msgstr "That page number is not an integer"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/core/paginator.py:33
 msgid "That page number is less than 1"
-msgstr "That page number is less than 1"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/core/paginator.py:34
 msgid "That page contains no results"
-msgstr "That page contains no results"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/core/validators.py:22
 msgid "Enter a valid value."
-msgstr "Enter a valid value."
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/core/validators.py:70
 msgid "Enter a valid domain name."
-msgstr "Enter a valid domain name."
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/core/validators.py:153
 #: env/lib/python3.10/site-packages/django/forms/fields.py:774
 msgid "Enter a valid URL."
-msgstr "Enter a valid URL."
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/core/validators.py:200
 msgid "Enter a valid integer."
-msgstr "Enter a valid integer."
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/core/validators.py:211
 msgid "Enter a valid email address."
-msgstr "Enter a valid email address."
+msgstr ""
 
 #. Translators: "letters" means latin letters: a-z and A-Z.
 #: env/lib/python3.10/site-packages/django/core/validators.py:289
@@ -795,8 +804,8 @@ msgstr ""
 
 #: env/lib/python3.10/site-packages/django/core/validators.py:297
 msgid ""
-"Enter a valid “slug” consisting of Unicode letters, numbers, underscores, or "
-"hyphens."
+"Enter a valid “slug” consisting of Unicode letters, numbers, underscores, or"
+" hyphens."
 msgstr ""
 
 #: env/lib/python3.10/site-packages/django/core/validators.py:309
@@ -805,44 +814,44 @@ msgstr ""
 #: env/lib/python3.10/site-packages/django/db/models/fields/__init__.py:2220
 #, python-format
 msgid "Enter a valid %(protocol)s address."
-msgstr "Enter a valid %(protocol)s address."
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/core/validators.py:311
 msgid "IPv4"
-msgstr "IPv4"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/core/validators.py:320
 #: env/lib/python3.10/site-packages/django/utils/ipv6.py:43
 msgid "IPv6"
-msgstr "IPv6"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/core/validators.py:334
 msgid "IPv4 or IPv6"
-msgstr "IPv4 or IPv6"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/core/validators.py:375
 msgid "Enter only digits separated by commas."
-msgstr "Enter only digits separated by commas."
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/core/validators.py:381
 #, python-format
 msgid "Ensure this value is %(limit_value)s (it is %(show_value)s)."
-msgstr "Ensure this value is %(limit_value)s (it is %(show_value)s)."
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/core/validators.py:416
 #, python-format
 msgid "Ensure this value is less than or equal to %(limit_value)s."
-msgstr "Ensure this value is less than or equal to %(limit_value)s."
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/core/validators.py:425
 #, python-format
 msgid "Ensure this value is greater than or equal to %(limit_value)s."
-msgstr "Ensure this value is greater than or equal to %(limit_value)s."
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/core/validators.py:434
 #, python-format
 msgid "Ensure this value is a multiple of step size %(limit_value)s."
-msgstr "Ensure this value is a multiple of step size %(limit_value)s."
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/core/validators.py:441
 #, python-format
@@ -877,7 +886,7 @@ msgstr[1] ""
 #: env/lib/python3.10/site-packages/django/forms/fields.py:365
 #: env/lib/python3.10/site-packages/django/forms/fields.py:404
 msgid "Enter a number."
-msgstr "Enter a number."
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/core/validators.py:516
 #, python-format
@@ -911,40 +920,40 @@ msgstr ""
 
 #: env/lib/python3.10/site-packages/django/core/validators.py:659
 msgid "Null characters are not allowed."
-msgstr "Null characters are not allowed."
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/db/models/base.py:1600
 #: env/lib/python3.10/site-packages/django/forms/models.py:908
 msgid "and"
-msgstr "and"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/db/models/base.py:1602
 #, python-format
 msgid "%(model_name)s with this %(field_labels)s already exists."
-msgstr "%(model_name)s with this %(field_labels)s already exists."
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/db/models/constraints.py:22
 #, python-format
 msgid "Constraint “%(name)s” is violated."
-msgstr "Constraint “%(name)s” is violated."
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/db/models/fields/__init__.py:134
 #, python-format
 msgid "Value %(value)r is not a valid choice."
-msgstr "Value %(value)r is not a valid choice."
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/db/models/fields/__init__.py:135
 msgid "This field cannot be null."
-msgstr "This field cannot be null."
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/db/models/fields/__init__.py:136
 msgid "This field cannot be blank."
-msgstr "This field cannot be blank."
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/db/models/fields/__init__.py:137
 #, python-format
 msgid "%(model_name)s with this %(field_label)s already exists."
-msgstr "%(model_name)s with this %(field_label)s already exists."
+msgstr ""
 
 #. Translators: The 'lookup_type' is one of 'date', 'year' or
 #. 'month'. Eg: "Title must be unique for pub_date year"
@@ -957,34 +966,34 @@ msgstr ""
 #: env/lib/python3.10/site-packages/django/db/models/fields/__init__.py:180
 #, python-format
 msgid "Field of type: %(field_type)s"
-msgstr "Field of type: %(field_type)s"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/db/models/fields/__init__.py:1162
 #, python-format
 msgid "“%(value)s” value must be either True or False."
-msgstr "“%(value)s” value must be either True or False."
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/db/models/fields/__init__.py:1163
 #, python-format
 msgid "“%(value)s” value must be either True, False, or None."
-msgstr "“%(value)s” value must be either True, False, or None."
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/db/models/fields/__init__.py:1165
 msgid "Boolean (Either True or False)"
-msgstr "Boolean (Either True or False)"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/db/models/fields/__init__.py:1215
 #, python-format
 msgid "String (up to %(max_length)s)"
-msgstr "String (up to %(max_length)s)"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/db/models/fields/__init__.py:1217
 msgid "String (unlimited)"
-msgstr "String (unlimited)"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/db/models/fields/__init__.py:1326
 msgid "Comma-separated integers"
-msgstr "Comma-separated integers"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/db/models/fields/__init__.py:1427
 #, python-format
@@ -1003,118 +1012,118 @@ msgstr ""
 
 #: env/lib/python3.10/site-packages/django/db/models/fields/__init__.py:1435
 msgid "Date (without time)"
-msgstr "Date (without time)"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/db/models/fields/__init__.py:1562
 #, python-format
 msgid ""
-"“%(value)s” value has an invalid format. It must be in YYYY-MM-DD HH:MM[:ss[."
-"uuuuuu]][TZ] format."
+"“%(value)s” value has an invalid format. It must be in YYYY-MM-DD "
+"HH:MM[:ss[.uuuuuu]][TZ] format."
 msgstr ""
 
 #: env/lib/python3.10/site-packages/django/db/models/fields/__init__.py:1570
 #, python-format
 msgid ""
-"“%(value)s” value has the correct format (YYYY-MM-DD HH:MM[:ss[.uuuuuu]]"
-"[TZ]) but it is an invalid date/time."
+"“%(value)s” value has the correct format (YYYY-MM-DD "
+"HH:MM[:ss[.uuuuuu]][TZ]) but it is an invalid date/time."
 msgstr ""
 
 #: env/lib/python3.10/site-packages/django/db/models/fields/__init__.py:1575
 msgid "Date (with time)"
-msgstr "Date (with time)"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/db/models/fields/__init__.py:1702
 #, python-format
 msgid "“%(value)s” value must be a decimal number."
-msgstr "“%(value)s” value must be a decimal number."
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/db/models/fields/__init__.py:1704
 msgid "Decimal number"
-msgstr "Decimal number"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/db/models/fields/__init__.py:1864
 #, python-format
 msgid ""
-"“%(value)s” value has an invalid format. It must be in [DD] [[HH:]MM:]ss[."
-"uuuuuu] format."
+"“%(value)s” value has an invalid format. It must be in [DD] "
+"[[HH:]MM:]ss[.uuuuuu] format."
 msgstr ""
 
 #: env/lib/python3.10/site-packages/django/db/models/fields/__init__.py:1868
 msgid "Duration"
-msgstr "Duration"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/db/models/fields/__init__.py:1920
 msgid "Email address"
-msgstr "Email address"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/db/models/fields/__init__.py:1945
 msgid "File path"
-msgstr "File path"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/db/models/fields/__init__.py:2023
 #, python-format
 msgid "“%(value)s” value must be a float."
-msgstr "“%(value)s” value must be a float."
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/db/models/fields/__init__.py:2025
 msgid "Floating point number"
-msgstr "Floating point number"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/db/models/fields/__init__.py:2065
 #, python-format
 msgid "“%(value)s” value must be an integer."
-msgstr "“%(value)s” value must be an integer."
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/db/models/fields/__init__.py:2067
 msgid "Integer"
-msgstr "Integer"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/db/models/fields/__init__.py:2163
 msgid "Big (8 byte) integer"
-msgstr "Big (8 byte) integer"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/db/models/fields/__init__.py:2180
 msgid "Small integer"
-msgstr "Small integer"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/db/models/fields/__init__.py:2188
 msgid "IPv4 address"
-msgstr "IPv4 address"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/db/models/fields/__init__.py:2219
 msgid "IP address"
-msgstr "IP address"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/db/models/fields/__init__.py:2310
 #: env/lib/python3.10/site-packages/django/db/models/fields/__init__.py:2311
 #, python-format
 msgid "“%(value)s” value must be either None, True or False."
-msgstr "“%(value)s” value must be either None, True or False."
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/db/models/fields/__init__.py:2313
 msgid "Boolean (Either True, False or None)"
-msgstr "Boolean (Either True, False or None)"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/db/models/fields/__init__.py:2364
 msgid "Positive big integer"
-msgstr "Positive big integer"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/db/models/fields/__init__.py:2379
 msgid "Positive integer"
-msgstr "Positive integer"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/db/models/fields/__init__.py:2394
 msgid "Positive small integer"
-msgstr "Positive small integer"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/db/models/fields/__init__.py:2410
 #, python-format
 msgid "Slug (up to %(max_length)s)"
-msgstr "Slug (up to %(max_length)s)"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/db/models/fields/__init__.py:2446
 msgid "Text"
-msgstr "Text"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/db/models/fields/__init__.py:2526
 #, python-format
@@ -1132,120 +1141,122 @@ msgstr ""
 
 #: env/lib/python3.10/site-packages/django/db/models/fields/__init__.py:2534
 msgid "Time"
-msgstr "Time"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/db/models/fields/__init__.py:2642
 msgid "URL"
-msgstr "URL"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/db/models/fields/__init__.py:2666
 msgid "Raw binary data"
-msgstr "Raw binary data"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/db/models/fields/__init__.py:2731
 #, python-format
 msgid "“%(value)s” is not a valid UUID."
-msgstr "“%(value)s” is not a valid UUID."
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/db/models/fields/__init__.py:2733
 msgid "Universally unique identifier"
-msgstr "Universally unique identifier"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/db/models/fields/files.py:244
 msgid "File"
-msgstr "File"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/db/models/fields/files.py:420
 msgid "Image"
-msgstr "Image"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/db/models/fields/json.py:24
 msgid "A JSON object"
-msgstr "A JSON object"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/db/models/fields/json.py:26
 msgid "Value must be valid JSON."
-msgstr "Value must be valid JSON."
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/db/models/fields/related.py:979
 #, python-format
 msgid "%(model)s instance with %(field)s %(value)r is not a valid choice."
-msgstr "%(model)s instance with %(field)s %(value)r is not a valid choice."
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/db/models/fields/related.py:982
 msgid "Foreign Key (type determined by related field)"
-msgstr "Foreign Key (type determined by related field)"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/db/models/fields/related.py:1276
 msgid "One-to-one relationship"
-msgstr "One-to-one relationship"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/db/models/fields/related.py:1333
 #, python-format
 msgid "%(from)s-%(to)s relationship"
-msgstr "%(from)s-%(to)s relationship"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/db/models/fields/related.py:1335
 #, python-format
 msgid "%(from)s-%(to)s relationships"
-msgstr "%(from)s-%(to)s relationships"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/db/models/fields/related.py:1383
 msgid "Many-to-many relationship"
-msgstr "Many-to-many relationship"
+msgstr ""
 
 #. Translators: If found as last label character, these punctuation
-#. characters will prevent the default label_suffix to be appended to the label
+#. characters will prevent the default label_suffix to be appended to the
+#. label
 #: env/lib/python3.10/site-packages/django/forms/boundfield.py:185
 msgid ":?.!"
-msgstr ":?.!"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/forms/fields.py:94
 msgid "This field is required."
-msgstr "This field is required."
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/forms/fields.py:314
 msgid "Enter a whole number."
-msgstr "Enter a whole number."
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/forms/fields.py:485
 #: env/lib/python3.10/site-packages/django/forms/fields.py:1257
 msgid "Enter a valid date."
-msgstr "Enter a valid date."
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/forms/fields.py:508
 #: env/lib/python3.10/site-packages/django/forms/fields.py:1258
 msgid "Enter a valid time."
-msgstr "Enter a valid time."
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/forms/fields.py:535
 msgid "Enter a valid date/time."
-msgstr "Enter a valid date/time."
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/forms/fields.py:569
 msgid "Enter a valid duration."
-msgstr "Enter a valid duration."
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/forms/fields.py:570
 #, python-brace-format
 msgid "The number of days must be between {min_days} and {max_days}."
-msgstr "The number of days must be between {min_days} and {max_days}."
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/forms/fields.py:639
 msgid "No file was submitted. Check the encoding type on the form."
-msgstr "No file was submitted. Check the encoding type on the form."
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/forms/fields.py:640
 msgid "No file was submitted."
-msgstr "No file was submitted."
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/forms/fields.py:641
 msgid "The submitted file is empty."
-msgstr "The submitted file is empty."
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/forms/fields.py:643
 #, python-format
-msgid "Ensure this filename has at most %(max)d character (it has %(length)d)."
+msgid ""
+"Ensure this filename has at most %(max)d character (it has %(length)d)."
 msgid_plural ""
 "Ensure this filename has at most %(max)d characters (it has %(length)d)."
 msgstr[0] ""
@@ -1253,7 +1264,7 @@ msgstr[1] ""
 
 #: env/lib/python3.10/site-packages/django/forms/fields.py:648
 msgid "Please either submit a file or check the clear checkbox, not both."
-msgstr "Please either submit a file or check the clear checkbox, not both."
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/forms/fields.py:716
 msgid ""
@@ -1266,35 +1277,35 @@ msgstr ""
 #: env/lib/python3.10/site-packages/django/forms/models.py:1592
 #, python-format
 msgid "Select a valid choice. %(value)s is not one of the available choices."
-msgstr "Select a valid choice. %(value)s is not one of the available choices."
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/forms/fields.py:967
 #: env/lib/python3.10/site-packages/django/forms/fields.py:1086
 #: env/lib/python3.10/site-packages/django/forms/models.py:1590
 msgid "Enter a list of values."
-msgstr "Enter a list of values."
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/forms/fields.py:1087
 msgid "Enter a complete value."
-msgstr "Enter a complete value."
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/forms/fields.py:1329
 msgid "Enter a valid UUID."
-msgstr "Enter a valid UUID."
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/forms/fields.py:1359
 msgid "Enter a valid JSON."
-msgstr "Enter a valid JSON."
+msgstr ""
 
 #. Translators: This is the default suffix added to form field labels
 #: env/lib/python3.10/site-packages/django/forms/forms.py:97
 msgid ":"
-msgstr ":"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/forms/forms.py:239
 #, python-format
 msgid "(Hidden field %(name)s) %(error)s"
-msgstr "(Hidden field %(name)s) %(error)s"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/forms/formsets.py:61
 #, python-format
@@ -1320,24 +1331,24 @@ msgstr[1] ""
 #: env/lib/python3.10/site-packages/django/forms/formsets.py:484
 #: env/lib/python3.10/site-packages/django/forms/formsets.py:491
 msgid "Order"
-msgstr "Order"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/forms/formsets.py:499
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/delete_confirmation.html:19
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/submit_line.html:8
 #: env/lib/python3.10/site-packages/grappelli/templates/related_widget_wrapper.html:26
 msgid "Delete"
-msgstr "Delete"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/forms/models.py:901
 #, python-format
 msgid "Please correct the duplicate data for %(field)s."
-msgstr "Please correct the duplicate data for %(field)s."
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/forms/models.py:906
 #, python-format
 msgid "Please correct the duplicate data for %(field)s, which must be unique."
-msgstr "Please correct the duplicate data for %(field)s, which must be unique."
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/forms/models.py:913
 #, python-format
@@ -1348,20 +1359,21 @@ msgstr ""
 
 #: env/lib/python3.10/site-packages/django/forms/models.py:922
 msgid "Please correct the duplicate values below."
-msgstr "Please correct the duplicate values below."
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/forms/models.py:1359
 msgid "The inline value did not match the parent instance."
-msgstr "The inline value did not match the parent instance."
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/forms/models.py:1450
-msgid "Select a valid choice. That choice is not one of the available choices."
-msgstr "Select a valid choice. That choice is not one of the available choices."
+msgid ""
+"Select a valid choice. That choice is not one of the available choices."
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/forms/models.py:1594
 #, python-format
 msgid "“%(pk)s” is not a valid value."
-msgstr "“%(pk)s” is not a valid value."
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/forms/utils.py:229
 #, python-format
@@ -1372,35 +1384,35 @@ msgstr ""
 
 #: env/lib/python3.10/site-packages/django/forms/widgets.py:527
 msgid "Clear"
-msgstr "Clear"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/forms/widgets.py:528
 msgid "Currently"
-msgstr "Currently"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/forms/widgets.py:529
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/edit_inline/stacked.html:26
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/edit_inline/tabular.html:78
 #: env/lib/python3.10/site-packages/grappelli/templates/related_widget_wrapper.html:10
 msgid "Change"
-msgstr "Change"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/forms/widgets.py:866
 msgid "Unknown"
-msgstr "Unknown"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/forms/widgets.py:867
 msgid "Yes"
-msgstr "Yes"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/forms/widgets.py:868
 msgid "No"
-msgstr "No"
+msgstr ""
 
 #. Translators: Please do not add spaces around commas.
 #: env/lib/python3.10/site-packages/django/template/defaultfilters.py:873
 msgid "yes,no,maybe"
-msgstr "yes,no,maybe"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/template/defaultfilters.py:903
 #: env/lib/python3.10/site-packages/django/template/defaultfilters.py:920
@@ -1413,343 +1425,343 @@ msgstr[1] ""
 #: env/lib/python3.10/site-packages/django/template/defaultfilters.py:922
 #, python-format
 msgid "%s KB"
-msgstr "%s KB"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/template/defaultfilters.py:924
 #, python-format
 msgid "%s MB"
-msgstr "%s MB"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/template/defaultfilters.py:926
 #, python-format
 msgid "%s GB"
-msgstr "%s GB"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/template/defaultfilters.py:928
 #, python-format
 msgid "%s TB"
-msgstr "%s TB"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/template/defaultfilters.py:930
 #, python-format
 msgid "%s PB"
-msgstr "%s PB"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/utils/dateformat.py:74
 msgid "p.m."
-msgstr "p.m."
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/utils/dateformat.py:75
 msgid "a.m."
-msgstr "a.m."
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/utils/dateformat.py:80
 msgid "PM"
-msgstr "PM"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/utils/dateformat.py:81
 msgid "AM"
-msgstr "AM"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/utils/dateformat.py:153
 msgid "midnight"
-msgstr "midnight"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/utils/dateformat.py:155
 msgid "noon"
-msgstr "noon"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/utils/dates.py:7
 msgid "Monday"
-msgstr "Monday"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/utils/dates.py:8
 msgid "Tuesday"
-msgstr "Tuesday"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/utils/dates.py:9
 msgid "Wednesday"
-msgstr "Wednesday"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/utils/dates.py:10
 msgid "Thursday"
-msgstr "Thursday"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/utils/dates.py:11
 msgid "Friday"
-msgstr "Friday"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/utils/dates.py:12
 msgid "Saturday"
-msgstr "Saturday"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/utils/dates.py:13
 msgid "Sunday"
-msgstr "Sunday"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/utils/dates.py:16
 msgid "Mon"
-msgstr "Mon"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/utils/dates.py:17
 msgid "Tue"
-msgstr "Tue"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/utils/dates.py:18
 msgid "Wed"
-msgstr "Wed"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/utils/dates.py:19
 msgid "Thu"
-msgstr "Thu"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/utils/dates.py:20
 msgid "Fri"
-msgstr "Fri"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/utils/dates.py:21
 msgid "Sat"
-msgstr "Sat"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/utils/dates.py:22
 msgid "Sun"
-msgstr "Sun"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/utils/dates.py:25
 msgid "January"
-msgstr "January"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/utils/dates.py:26
 msgid "February"
-msgstr "February"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/utils/dates.py:27
 msgid "March"
-msgstr "March"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/utils/dates.py:28
 msgid "April"
-msgstr "April"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/utils/dates.py:29
 msgid "May"
-msgstr "May"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/utils/dates.py:30
 msgid "June"
-msgstr "June"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/utils/dates.py:31
 msgid "July"
-msgstr "July"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/utils/dates.py:32
 msgid "August"
-msgstr "August"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/utils/dates.py:33
 msgid "September"
-msgstr "September"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/utils/dates.py:34
 msgid "October"
-msgstr "October"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/utils/dates.py:35
 msgid "November"
-msgstr "November"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/utils/dates.py:36
 msgid "December"
-msgstr "December"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/utils/dates.py:39
 msgid "jan"
-msgstr "jan"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/utils/dates.py:40
 msgid "feb"
-msgstr "feb"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/utils/dates.py:41
 msgid "mar"
-msgstr "mar"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/utils/dates.py:42
 msgid "apr"
-msgstr "apr"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/utils/dates.py:43
 msgid "may"
-msgstr "may"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/utils/dates.py:44
 msgid "jun"
-msgstr "jun"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/utils/dates.py:45
 msgid "jul"
-msgstr "jul"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/utils/dates.py:46
 msgid "aug"
-msgstr "aug"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/utils/dates.py:47
 msgid "sep"
-msgstr "sep"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/utils/dates.py:48
 msgid "oct"
-msgstr "oct"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/utils/dates.py:49
 msgid "nov"
-msgstr "nov"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/utils/dates.py:50
 msgid "dec"
-msgstr "dec"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/utils/dates.py:53
 msgctxt "abbrev. month"
 msgid "Jan."
-msgstr "Jan."
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/utils/dates.py:54
 msgctxt "abbrev. month"
 msgid "Feb."
-msgstr "Feb."
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/utils/dates.py:55
 msgctxt "abbrev. month"
 msgid "March"
-msgstr "March"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/utils/dates.py:56
 msgctxt "abbrev. month"
 msgid "April"
-msgstr "April"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/utils/dates.py:57
 msgctxt "abbrev. month"
 msgid "May"
-msgstr "May"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/utils/dates.py:58
 msgctxt "abbrev. month"
 msgid "June"
-msgstr "June"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/utils/dates.py:59
 msgctxt "abbrev. month"
 msgid "July"
-msgstr "July"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/utils/dates.py:60
 msgctxt "abbrev. month"
 msgid "Aug."
-msgstr "Aug."
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/utils/dates.py:61
 msgctxt "abbrev. month"
 msgid "Sept."
-msgstr "Sept."
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/utils/dates.py:62
 msgctxt "abbrev. month"
 msgid "Oct."
-msgstr "Oct."
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/utils/dates.py:63
 msgctxt "abbrev. month"
 msgid "Nov."
-msgstr "Nov."
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/utils/dates.py:64
 msgctxt "abbrev. month"
 msgid "Dec."
-msgstr "Dec."
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/utils/dates.py:67
 msgctxt "alt. month"
 msgid "January"
-msgstr "January"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/utils/dates.py:68
 msgctxt "alt. month"
 msgid "February"
-msgstr "February"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/utils/dates.py:69
 msgctxt "alt. month"
 msgid "March"
-msgstr "March"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/utils/dates.py:70
 msgctxt "alt. month"
 msgid "April"
-msgstr "April"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/utils/dates.py:71
 msgctxt "alt. month"
 msgid "May"
-msgstr "May"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/utils/dates.py:72
 msgctxt "alt. month"
 msgid "June"
-msgstr "June"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/utils/dates.py:73
 msgctxt "alt. month"
 msgid "July"
-msgstr "July"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/utils/dates.py:74
 msgctxt "alt. month"
 msgid "August"
-msgstr "August"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/utils/dates.py:75
 msgctxt "alt. month"
 msgid "September"
-msgstr "September"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/utils/dates.py:76
 msgctxt "alt. month"
 msgid "October"
-msgstr "October"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/utils/dates.py:77
 msgctxt "alt. month"
 msgid "November"
-msgstr "November"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/utils/dates.py:78
 msgctxt "alt. month"
 msgid "December"
-msgstr "December"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/utils/ipv6.py:20
 msgid "This is not a valid IPv6 address."
-msgstr "This is not a valid IPv6 address."
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/utils/text.py:76
 #, python-format
 msgctxt "String to return when truncating text"
 msgid "%(truncated_text)s…"
-msgstr "%(truncated_text)s…"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/utils/text.py:282
 msgid "or"
-msgstr "or"
+msgstr ""
 
 #. Translators: This string is used as a separator between list elements
 #: env/lib/python3.10/site-packages/django/utils/text.py:301
 #: env/lib/python3.10/site-packages/django/utils/timesince.py:135
 msgid ", "
-msgstr ", "
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/utils/timesince.py:8
 #, python-format
@@ -1795,11 +1807,11 @@ msgstr[1] ""
 
 #: env/lib/python3.10/site-packages/django/views/csrf.py:29
 msgid "Forbidden"
-msgstr "Forbidden"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/views/csrf.py:30
 msgid "CSRF verification failed. Request aborted."
-msgstr "CSRF verification failed. Request aborted."
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/views/csrf.py:34
 msgid ""
@@ -1818,10 +1830,10 @@ msgstr ""
 
 #: env/lib/python3.10/site-packages/django/views/csrf.py:45
 msgid ""
-"If you are using the <meta name=\"referrer\" content=\"no-referrer\"> tag or "
-"including the “Referrer-Policy: no-referrer” header, please remove them. The "
-"CSRF protection requires the “Referer” header to do strict referer checking. "
-"If you’re concerned about privacy, use alternatives like <a "
+"If you are using the <meta name=\"referrer\" content=\"no-referrer\"> tag or"
+" including the “Referrer-Policy: no-referrer” header, please remove them. "
+"The CSRF protection requires the “Referer” header to do strict referer "
+"checking. If you’re concerned about privacy, use alternatives like <a "
 "rel=\"noreferrer\" …> for links to third-party sites."
 msgstr ""
 
@@ -1840,87 +1852,87 @@ msgstr ""
 
 #: env/lib/python3.10/site-packages/django/views/csrf.py:66
 msgid "More information is available with DEBUG=True."
-msgstr "More information is available with DEBUG=True."
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/views/generic/dates.py:44
 msgid "No year specified"
-msgstr "No year specified"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/views/generic/dates.py:64
 #: env/lib/python3.10/site-packages/django/views/generic/dates.py:115
 #: env/lib/python3.10/site-packages/django/views/generic/dates.py:214
 msgid "Date out of range"
-msgstr "Date out of range"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/views/generic/dates.py:94
 msgid "No month specified"
-msgstr "No month specified"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/views/generic/dates.py:147
 msgid "No day specified"
-msgstr "No day specified"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/views/generic/dates.py:194
 msgid "No week specified"
-msgstr "No week specified"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/views/generic/dates.py:353
 #: env/lib/python3.10/site-packages/django/views/generic/dates.py:384
 #, python-format
 msgid "No %(verbose_name_plural)s available"
-msgstr "No %(verbose_name_plural)s available"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/views/generic/dates.py:680
 #, python-format
 msgid ""
-"Future %(verbose_name_plural)s not available because %(class_name)s."
-"allow_future is False."
+"Future %(verbose_name_plural)s not available because "
+"%(class_name)s.allow_future is False."
 msgstr ""
 
 #: env/lib/python3.10/site-packages/django/views/generic/dates.py:720
 #, python-format
 msgid "Invalid date string “%(datestr)s” given format “%(format)s”"
-msgstr "Invalid date string “%(datestr)s” given format “%(format)s”"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/views/generic/detail.py:56
 #, python-format
 msgid "No %(verbose_name)s found matching the query"
-msgstr "No %(verbose_name)s found matching the query"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/views/generic/list.py:70
 msgid "Page is not “last”, nor can it be converted to an int."
-msgstr "Page is not “last”, nor can it be converted to an int."
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/views/generic/list.py:77
 #, python-format
 msgid "Invalid page (%(page_number)s): %(message)s"
-msgstr "Invalid page (%(page_number)s): %(message)s"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/views/generic/list.py:173
 #, python-format
 msgid "Empty list and “%(class_name)s.allow_empty” is False."
-msgstr "Empty list and “%(class_name)s.allow_empty” is False."
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/views/static.py:49
 msgid "Directory indexes are not allowed here."
-msgstr "Directory indexes are not allowed here."
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/views/static.py:51
 #, python-format
 msgid "“%(path)s” does not exist"
-msgstr "“%(path)s” does not exist"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/views/static.py:68
 #: env/lib/python3.10/site-packages/django/views/templates/directory_index.html:8
 #: env/lib/python3.10/site-packages/django/views/templates/directory_index.html:11
 #, python-format
 msgid "Index of %(directory)s"
-msgstr "Index of %(directory)s"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/views/templates/default_urlconf.html:7
 #: env/lib/python3.10/site-packages/django/views/templates/default_urlconf.html:204
 msgid "The install worked successfully! Congratulations!"
-msgstr "The install worked successfully! Congratulations!"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/views/templates/default_urlconf.html:206
 #, python-format
@@ -1932,102 +1944,102 @@ msgstr ""
 #: env/lib/python3.10/site-packages/django/views/templates/default_urlconf.html:208
 #, python-format
 msgid ""
-"You are seeing this page because <a href=\"https://docs.djangoproject.com/en/"
-"%(version)s/ref/settings/#debug\" target=\"_blank\" "
-"rel=\"noopener\">DEBUG=True</a> is in your settings file and you have not "
-"configured any URLs."
+"You are seeing this page because <a "
+"href=\"https://docs.djangoproject.com/en/%(version)s/ref/settings/#debug\" "
+"target=\"_blank\" rel=\"noopener\">DEBUG=True</a> is in your settings file "
+"and you have not configured any URLs."
 msgstr ""
 
 #: env/lib/python3.10/site-packages/django/views/templates/default_urlconf.html:217
 msgid "Django Documentation"
-msgstr "Django Documentation"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/views/templates/default_urlconf.html:218
 msgid "Topics, references, &amp; how-to’s"
-msgstr "Topics, references, &amp; how-to’s"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/views/templates/default_urlconf.html:226
 msgid "Tutorial: A Polling App"
-msgstr "Tutorial: A Polling App"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/views/templates/default_urlconf.html:227
 msgid "Get started with Django"
-msgstr "Get started with Django"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/views/templates/default_urlconf.html:235
 msgid "Django Community"
-msgstr "Django Community"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/django/views/templates/default_urlconf.html:236
 msgid "Connect, get help, or contribute"
-msgstr "Connect, get help, or contribute"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/dashboard/dashboards.py:87
 msgid "Dashboard"
-msgstr "Dashboard"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/dashboard/dashboards.py:131
 msgid "Quick links"
-msgstr "Quick links"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/dashboard/dashboards.py:134
 msgid "Return to site"
-msgstr "Return to site"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/dashboard/dashboards.py:135
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/auth/user/change_password.html:11
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/auth/user/change_password.html:57
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/base.html:103
 msgid "Change password"
-msgstr "Change password"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/dashboard/dashboards.py:137
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/base.html:110
 msgid "Log out"
-msgstr "Log out"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/dashboard/dashboards.py:143
 #: env/lib/python3.10/site-packages/grappelli/dashboard/modules.py:216
 msgid "Applications"
-msgstr "Applications"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/dashboard/dashboards.py:149
 msgid "Administration"
-msgstr "Administration"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/dashboard/dashboards.py:154
 #: env/lib/python3.10/site-packages/grappelli/dashboard/modules.py:295
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/index.html:69
 msgid "Recent actions"
-msgstr "Recent actions"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/dashboard/dashboards.py:158
 msgid "Latest Django News"
-msgstr "Latest Django News"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/dashboard/dashboards.py:165
 msgid "Support"
-msgstr "Support"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/dashboard/dashboards.py:168
 msgid "Django documentation"
-msgstr "Django documentation"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/dashboard/dashboards.py:174
 msgid "Django \"django-users\" mailing list"
-msgstr "Django \"django-users\" mailing list"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/dashboard/dashboards.py:180
 msgid "Django irc channel"
-msgstr "Django irc channel"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/dashboard/modules.py:184
 msgid "Links"
-msgstr "Links"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/dashboard/modules.py:356
 msgid "RSS Feed"
-msgstr "RSS Feed"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/dashboard/templates/admin/index.html:25
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/500.html:9
@@ -2064,7 +2076,7 @@ msgstr "RSS Feed"
 #: env/lib/python3.10/site-packages/grappelli/templates/reversion/revision_form.html:7
 #: env/lib/python3.10/site-packages/grappelli/templates/smuggler/load_data_form.html:24
 msgid "Home"
-msgstr "Home"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/dashboard/templates/grappelli/dashboard/modules/app_list.html:19
 #: env/lib/python3.10/site-packages/grappelli/dashboard/templates/grappelli/dashboard/modules/model_list.html:9
@@ -2073,80 +2085,80 @@ msgstr "Home"
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/index.html:44
 #: env/lib/python3.10/site-packages/grappelli/templates/related_widget_wrapper.html:18
 msgid "Add"
-msgstr "Add"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/dashboard/templates/grappelli/dashboard/modules/recent_actions.html:18
 msgid "None Available"
-msgstr "None Available"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/404.html:7
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/404.html:11
 msgid "Page not found"
-msgstr "Page not found"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/404.html:12
 msgid "We're sorry, but the requested page could not be found."
-msgstr "We're sorry, but the requested page could not be found."
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/500.html:10
 msgid "Server error"
-msgstr "Server error"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/500.html:15
 msgid "Server error (500)"
-msgstr "Server error (500)"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/500.html:19
 msgid "Server Error <em>(500)</em>"
-msgstr "Server Error <em>(500)</em>"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/500.html:20
 msgid ""
-"There's been an error. It's been reported to the site administrators via e-"
-"mail and should be fixed shortly. Thanks for your patience."
+"There's been an error. It's been reported to the site administrators via "
+"e-mail and should be fixed shortly. Thanks for your patience."
 msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/actions.html:4
 msgid "Run the selected action"
-msgstr "Run the selected action"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/actions.html:4
 msgid "Go"
-msgstr "Go"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/actions.html:11
 msgid "Click here to select the objects across all pages"
-msgstr "Click here to select the objects across all pages"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/actions.html:11
 #, python-format
 msgid "Select all %(total_count)s %(module_name)s"
-msgstr "Select all %(total_count)s %(module_name)s"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/actions.html:12
 msgid "Clear selection"
-msgstr "Clear selection"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/app_index.html:13
 #, python-format
 msgid "<li>%(name)s</li>"
-msgstr "<li>%(name)s</li>"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/app_index.html:37
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/index.html:52
 msgid "You don´t have permission to edit anything."
-msgstr "You don´t have permission to edit anything."
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/auth/user/change_password.html:15
 #: env/lib/python3.10/site-packages/grappelli/templates/registration/password_change_done.html:7
 #: env/lib/python3.10/site-packages/grappelli/templates/registration/password_change_form.html:7
 msgid "Password change"
-msgstr "Password change"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/auth/user/change_password.html:24
 #, python-format
 msgid "Enter a new password for the user <strong>%(username)s</strong>."
-msgstr "Enter a new password for the user <strong>%(username)s</strong>."
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/auth/user/change_password.html:27
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/change_form.html:190
@@ -2157,7 +2169,7 @@ msgstr "Enter a new password for the user <strong>%(username)s</strong>."
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/login.html:31
 #: env/lib/python3.10/site-packages/grappelli/templates/smuggler/load_data_form.html:40
 msgid "Please correct the error below."
-msgstr "Please correct the error below."
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/auth/user/change_password.html:27
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/change_form.html:190
@@ -2168,55 +2180,55 @@ msgstr "Please correct the error below."
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/login.html:31
 #: env/lib/python3.10/site-packages/grappelli/templates/smuggler/load_data_form.html:42
 msgid "Please correct the errors below."
-msgstr "Please correct the errors below."
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/auth/user/change_password.html:34
 #: env/lib/python3.10/site-packages/grappelli/templates/registration/password_change_form.html:30
 msgid "New password"
-msgstr "New password"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/auth/user/change_password.html:46
 #: env/lib/python3.10/site-packages/grappelli/templates/registration/password_change_form.html:37
 msgid "Password (again)"
-msgstr "Password (again)"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/auth/user/change_password.html:50
 #: env/lib/python3.10/site-packages/grappelli/templates/registration/password_reset_confirm.html:29
 msgid "Enter the same password as above, for verification."
-msgstr "Enter the same password as above, for verification."
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/base.html:82
 msgid "Django administration"
-msgstr "Django administration"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/base.html:119
 msgid "View site"
-msgstr "View site"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/base.html:124
 #: env/lib/python3.10/site-packages/grappelli/templates/admin_doc/bookmarklets.html:9
 msgid "Documentation"
-msgstr "Documentation"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/change_form.html:143
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/edit_inline/stacked.html:9
 msgid "Open All Items"
-msgstr "Open All Items"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/change_form.html:144
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/edit_inline/stacked.html:10
 msgid "Close All Items"
-msgstr "Close All Items"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/change_form.html:171
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/object_history.html:15
 #: env/lib/python3.10/site-packages/grappelli/templates/reversion/revision_form.html:11
 msgid "History"
-msgstr "History"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/change_form.html:172
 msgid "View on site"
-msgstr "View on site"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/change_list.html:159
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/change_list_filter_confirm.html:159
@@ -2225,14 +2237,14 @@ msgstr "View on site"
 #: env/lib/python3.10/site-packages/grappelli/templates/smuggler/change_list.html:15
 #, python-format
 msgid "Add %(name)s"
-msgstr "Add %(name)s"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/change_list.html:188
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/change_list_filter_confirm.html:188
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/change_list_filter_confirm_sidebar.html:175
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/change_list_filter_sidebar.html:175
 msgid "Filter"
-msgstr "Filter"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/change_list.html:249
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/change_list_filter_confirm.html:257
@@ -2241,71 +2253,71 @@ msgstr "Filter"
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/constance/change_list.html:108
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/submit_line.html:11
 msgid "Save"
-msgstr "Save"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/change_list_filter_confirm.html:195
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/change_list_filter_confirm_sidebar.html:179
 msgid "Apply"
-msgstr "Apply"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/change_list_filter_confirm.html:196
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/change_list_filter_confirm_sidebar.html:180
 msgid "Reset"
-msgstr "Reset"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/change_list_results.html:18
 msgid "Toggle sorting"
-msgstr "Toggle sorting"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/change_list_results.html:19
 #, python-format
 msgid "Sorting priority: %(priority_number)s"
-msgstr "Sorting priority: %(priority_number)s"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/change_list_results.html:20
 msgid "Remove from sorting"
-msgstr "Remove from sorting"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/constance/includes/results_list.html:8
 msgid "Name"
-msgstr "Name"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/constance/includes/results_list.html:13
 msgid "Default"
-msgstr "Default"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/constance/includes/results_list.html:18
 msgid "Value"
-msgstr "Value"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/constance/includes/results_list.html:23
 msgid "Is modified"
-msgstr "Is modified"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/constance/includes/results_list.html:67
 msgid "Reset to default"
-msgstr "Reset to default"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/csv_export_selected_confirmation.html:12
 msgid "Export selection as CSV"
-msgstr "Export selection as CSV"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/csv_export_selected_confirmation.html:31
 msgid "Export following fields:"
-msgstr "Export following fields:"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/csv_export_selected_confirmation.html:34
 msgid "Select all"
-msgstr "Select all"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/csv_export_selected_confirmation.html:54
 msgid "Back"
-msgstr "Back"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/csv_export_selected_confirmation.html:55
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/import_export/change_list_export_item.html:4
 msgid "Export"
-msgstr "Export"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/delete_confirmation.html:29
 #, python-format
@@ -2318,8 +2330,8 @@ msgstr ""
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/delete_confirmation.html:37
 #, python-format
 msgid ""
-"Deleting the %(object_name)s '%(escaped_object)s' would require deleting the "
-"following protected related objects:"
+"Deleting the %(object_name)s '%(escaped_object)s' would require deleting the"
+" following protected related objects:"
 msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/delete_confirmation.html:47
@@ -2331,16 +2343,16 @@ msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/delete_confirmation.html:55
 msgid "No, take me back"
-msgstr "No, take me back"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/delete_confirmation.html:56
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/delete_selected_confirmation.html:59
 msgid "Yes, I’m sure"
-msgstr "Yes, I’m sure"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/delete_selected_confirmation.html:16
 msgid "Delete multiple objects"
-msgstr "Delete multiple objects"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/delete_selected_confirmation.html:26
 #, python-format
@@ -2366,108 +2378,108 @@ msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/delete_selected_confirmation.html:58
 msgid "Cancel"
-msgstr "Cancel"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/edit_inline/stacked.html:11
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/edit_inline/stacked.html:60
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/edit_inline/tabular.html:108
 msgid "Add Item"
-msgstr "Add Item"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/edit_inline/stacked.html:29
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/edit_inline/tabular.html:81
 msgid "View on Site"
-msgstr "View on Site"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/edit_inline/stacked.html:31
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/edit_inline/tabular.html:83
 msgid "Move Item"
-msgstr "Move Item"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/edit_inline/stacked.html:35
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/edit_inline/stacked.html:40
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/edit_inline/tabular.html:87
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/edit_inline/tabular.html:92
 msgid "Delete Item"
-msgstr "Delete Item"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/edit_inline/stacked.html:58
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/edit_inline/tabular.html:106
 #, python-format
 msgid "Add another %(verbose_name)s"
-msgstr "Add another %(verbose_name)s"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/edit_inline/tabular.html:9
 msgid "Add Another"
-msgstr "Add Another"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/filter.html:4
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/filter_listing.html:3
 #, python-format
 msgid "%(filter_title)s"
-msgstr "%(filter_title)s"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/import_export/change_list_import_item.html:4
 msgid "Import"
-msgstr "Import"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/includes/object_delete_summary.html:3
 msgid "Summary"
-msgstr "Summary"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/index.html:57
 msgid "Custom Views"
-msgstr "Custom Views"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/index.html:71
 msgid "My actions"
-msgstr "My actions"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/index.html:74
 msgid "None available"
-msgstr "None available"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/invalid_setup.html:16
 msgid ""
-"Something's wrong with your database installation. Make sure the appropriate "
-"database tables have been created, and make sure the database is readable by "
-"the appropriate user."
+"Something's wrong with your database installation. Make sure the appropriate"
+" database tables have been created, and make sure the database is readable "
+"by the appropriate user."
 msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/login.html:26
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/login.html:67
 #: env/lib/python3.10/site-packages/grappelli/templates/registration/password_reset_complete.html:17
 msgid "Log in"
-msgstr "Log in"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/login.html:60
 msgid "Forgotten your password or username?"
-msgstr "Forgotten your password or username?"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/object_history.html:26
 #: env/lib/python3.10/site-packages/grappelli/templates/reversion/object_history.html:13
 #: env/lib/python3.10/site-packages/grappelli/templates/reversion/recover_list.html:22
 msgid "Date/time"
-msgstr "Date/time"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/object_history.html:27
 #: env/lib/python3.10/site-packages/grappelli/templates/reversion/object_history.html:14
 msgid "User"
-msgstr "User"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/object_history.html:28
 msgid "Action"
-msgstr "Action"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/object_history.html:34
 msgid "DATETIME_FORMAT"
-msgstr "DATETIME_FORMAT"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/object_history.html:42
 #: env/lib/python3.10/site-packages/grappelli/templates/reversion/object_history.html:36
 msgid ""
-"This object doesn't have a change history. It probably wasn't added via this "
-"admin site."
+"This object doesn't have a change history. It probably wasn't added via this"
+" admin site."
 msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/pagination.html:9
@@ -2482,7 +2494,7 @@ msgstr[1] ""
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/pagination.html:16
 #, python-format
 msgid "%(full_result_count)s total"
-msgstr "%(full_result_count)s total"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/pagination.html:22
 #, python-format
@@ -2500,71 +2512,67 @@ msgstr[1] ""
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/pagination.html:31
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/pagination.html:44
 msgid "Show all"
-msgstr "Show all"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/popup_response.html:3
 msgid "Popup closing..."
-msgstr "Popup closing..."
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/related_widget_wrapper.html:24
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/widgets/related_widget_wrapper.html:18
 #: env/lib/python3.10/site-packages/grappelli/templates/related_widget_wrapper.html:16
 #, python-format
 msgid "Add another %(model)s"
-msgstr "Add another %(model)s"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/submit_line.html:14
 msgid "Save as new"
-msgstr "Save as new"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/submit_line.html:17
 msgid "Save and add another"
-msgstr "Save and add another"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/submit_line.html:20
 msgid "Save and continue editing"
-msgstr "Save and continue editing"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/widgets/related_widget_wrapper.html:11
 #: env/lib/python3.10/site-packages/grappelli/templates/related_widget_wrapper.html:8
 #, python-format
 msgid "Change selected %(model)s"
-msgstr "Change selected %(model)s"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/admin/widgets/related_widget_wrapper.html:25
 #: env/lib/python3.10/site-packages/grappelli/templates/related_widget_wrapper.html:24
 #, python-format
 msgid "Delete selected %(model)s"
-msgstr "Delete selected %(model)s"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/admin_doc/bookmarklets.html:10
 #: env/lib/python3.10/site-packages/grappelli/templates/admin_doc/bookmarklets.html:16
 msgid "Bookmarklets"
-msgstr "Bookmarklets"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/admin_doc/bookmarklets.html:13
 msgid "Documentation bookmarklets"
-msgstr "Documentation bookmarklets"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/admin_doc/bookmarklets.html:18
 msgid ""
 "\n"
 "            <p>To install bookmarklets, drag the link to your bookmarks\n"
-"    toolbar, or right-click the link and add it to your bookmarks. Now you "
-"can\n"
-"    select the bookmarklet from any page in the site.  Note that some of "
-"these\n"
-"    bookmarklets require you to be viewing the site from a computer "
-"designated\n"
-"    as \"internal\" (talk to your system administrator if you aren't sure "
-"if\n"
+"    toolbar, or right-click the link and add it to your bookmarks. Now you can\n"
+"    select the bookmarklet from any page in the site.  Note that some of these\n"
+"    bookmarklets require you to be viewing the site from a computer designated\n"
+"    as \"internal\" (talk to your system administrator if you aren't sure if\n"
 "    your computer is \"internal\").</p>\n"
 "        "
 msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/admin_doc/bookmarklets.html:27
 msgid "Documentation for this page"
-msgstr "Documentation for this page"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/admin_doc/bookmarklets.html:28
 msgid ""
@@ -2574,7 +2582,7 @@ msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/admin_doc/bookmarklets.html:31
 msgid "Show object ID"
-msgstr "Show object ID"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/admin_doc/bookmarklets.html:32
 msgid ""
@@ -2584,54 +2592,54 @@ msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/admin_doc/bookmarklets.html:35
 msgid "Edit this object (current window)"
-msgstr "Edit this object (current window)"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/admin_doc/bookmarklets.html:36
 msgid "Jumps to the admin page for pages that represent a single object."
-msgstr "Jumps to the admin page for pages that represent a single object."
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/admin_doc/bookmarklets.html:39
 msgid "Edit this object (new window)"
-msgstr "Edit this object (new window)"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/admin_doc/bookmarklets.html:40
 msgid "As above, but opens the admin page in a new window."
-msgstr "As above, but opens the admin page in a new window."
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/admin_doc/view_index.html:43
 msgid "Empty namespace"
-msgstr "Empty namespace"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/admin_doc/view_index.html:57
 msgid "Views by empty namespace"
-msgstr "Views by empty namespace"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/registration/logged_out.html:16
 msgid "Log in again"
-msgstr "Log in again"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/registration/password_change_done.html:16
 msgid "Your password was changed."
-msgstr "Your password was changed."
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/registration/password_change_form.html:18
 msgid ""
-"Please enter your old password, for security's sake, and then enter your new "
-"password twice so we can verify you typed it in correctly."
+"Please enter your old password, for security's sake, and then enter your new"
+" password twice so we can verify you typed it in correctly."
 msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/registration/password_change_form.html:23
 msgid "Old password"
-msgstr "Old password"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/registration/password_change_form.html:46
 #: env/lib/python3.10/site-packages/grappelli/templates/registration/password_reset_confirm.html:35
 msgid "Change my password"
-msgstr "Change my password"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/registration/password_reset_complete.html:16
 msgid "Your password has been set. You may go ahead and log in now."
-msgstr "Your password has been set. You may go ahead and log in now."
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/registration/password_reset_confirm.html:18
 msgid ""
@@ -2641,11 +2649,11 @@ msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/registration/password_reset_confirm.html:21
 msgid "New password:"
-msgstr "New password:"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/registration/password_reset_confirm.html:26
 msgid "Confirm password:"
-msgstr "Confirm password:"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/registration/password_reset_confirm.html:47
 msgid ""
@@ -2655,7 +2663,7 @@ msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/registration/password_reset_done.html:5
 msgid "Password reset successful"
-msgstr "Password reset successful"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/registration/password_reset_done.html:16
 msgid ""
@@ -2678,24 +2686,24 @@ msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/registration/password_reset_email.html:4
 msgid "Please go to the following page and choose a new password:"
-msgstr "Please go to the following page and choose a new password:"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/registration/password_reset_email.html:8
 msgid "Your username, in case you've forgotten:"
-msgstr "Your username, in case you've forgotten:"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/registration/password_reset_email.html:10
 msgid "Thanks for using our site!"
-msgstr "Thanks for using our site!"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/registration/password_reset_email.html:12
 #, python-format
 msgid "The %(site_name)s team"
-msgstr "The %(site_name)s team"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/registration/password_reset_form.html:5
 msgid "Password reset"
-msgstr "Password reset"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/registration/password_reset_form.html:17
 msgid ""
@@ -2705,18 +2713,18 @@ msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/registration/password_reset_form.html:20
 msgid "Email address:"
-msgstr "Email address:"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/registration/password_reset_form.html:28
 msgid "Reset my password"
-msgstr "Reset my password"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/reversion/change_list.html:6
 #: env/lib/python3.10/site-packages/grappelli/templates/reversion/recover_form.html:10
 #: env/lib/python3.10/site-packages/grappelli/templates/reversion/recover_list.html:9
 #, python-format
 msgid "Recover deleted %(name)s"
-msgstr "Recover deleted %(name)s"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/reversion/object_history.html:7
 msgid ""
@@ -2726,11 +2734,11 @@ msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/reversion/object_history.html:15
 msgid "Comment"
-msgstr "Comment"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/reversion/recover_form.html:20
 msgid "Press the save button below to recover this version of the object."
-msgstr "Press the save button below to recover this version of the object."
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/reversion/recover_list.html:16
 msgid ""
@@ -2739,27 +2747,27 @@ msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/reversion/recover_list.html:36
 msgid "There are no deleted objects to recover."
-msgstr "There are no deleted objects to recover."
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/reversion/revision_form.html:12
 #, python-format
 msgid "Revert %(verbose_name)s"
-msgstr "Revert %(verbose_name)s"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/reversion/revision_form.html:21
 msgid "Press the save button below to revert to this version of the object."
-msgstr "Press the save button below to revert to this version of the object."
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/smuggler/change_list.html:7
 msgid "Dump data"
-msgstr "Dump data"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/smuggler/change_list.html:11
 #: env/lib/python3.10/site-packages/grappelli/templates/smuggler/load_data_form.html:6
 #: env/lib/python3.10/site-packages/grappelli/templates/smuggler/load_data_form.html:25
 #: env/lib/python3.10/site-packages/grappelli/templates/smuggler/load_data_form.html:35
 msgid "Load data"
-msgstr "Load data"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/smuggler/load_data_form.html:46
 msgid ""
@@ -2768,30 +2776,30 @@ msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templates/smuggler/load_data_form.html:53
 msgid "Load"
-msgstr "Load"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/templatetags/grp_tags.py:63
 msgid "Django site admin"
-msgstr "Django site admin"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/tests/test_switch.py:101
 #: env/lib/python3.10/site-packages/grappelli/tests/test_switch.py:160
 #: env/lib/python3.10/site-packages/grappelli/views/switch.py:44
 #: env/lib/python3.10/site-packages/grappelli/views/switch.py:55
 msgid "Permission denied."
-msgstr "Permission denied."
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/tests/test_switch.py:144
 #: env/lib/python3.10/site-packages/grappelli/views/switch.py:47
 #: env/lib/python3.10/site-packages/grappelli/views/switch.py:58
 #, python-format
 msgid "%(name)s object with primary key %(key)r does not exist."
-msgstr "%(name)s object with primary key %(key)r does not exist."
+msgstr ""
 
 #: env/lib/python3.10/site-packages/grappelli/views/related.py:127
 #: env/lib/python3.10/site-packages/grappelli/views/related.py:157
 msgid "?"
-msgstr "?"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/modeltranslation/tests/models.py:10
 #: env/lib/python3.10/site-packages/modeltranslation/tests/models.py:36
@@ -2812,38 +2820,38 @@ msgstr "?"
 #: env/lib/python3.10/site-packages/modeltranslation/tests/models.py:450
 #: env/lib/python3.10/site-packages/modeltranslation/tests/models.py:458
 msgid "title"
-msgstr "title"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/modeltranslation/tests/models.py:14
 msgid "password"
-msgstr "password"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/modeltranslation/tests/models.py:225
 #: env/lib/python3.10/site-packages/modeltranslation/tests/models.py:244
 msgid "title a"
-msgstr "title a"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/modeltranslation/tests/models.py:229
 #: env/lib/python3.10/site-packages/modeltranslation/tests/models.py:255
 msgid "title b"
-msgstr "title b"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/modeltranslation/tests/models.py:233
 msgid "title c"
-msgstr "title c"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/modeltranslation/tests/models.py:237
 msgid "title d"
-msgstr "title d"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/modeltranslation/tests/models.py:360
 msgid "visits"
-msgstr "visits"
+msgstr ""
 
 #: env/lib/python3.10/site-packages/modeltranslation/tests/translation.py:57
 msgid "Sorry, translation is not available."
-msgstr "Sorry, translation is not available."
+msgstr ""
 
 #: env/lib/python3.10/site-packages/modeltranslation/widgets.py:31
 msgid "None"
-msgstr "None"
+msgstr ""

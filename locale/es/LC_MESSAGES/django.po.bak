@@ -1,0 +1,203 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-16 19:14-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? "
+"1 : 2;\n"
+#: biblioteca/templates/_includes/_footer_principal.html:3
+#, python-format
+msgid ""
+" Actualmente tenemos: %(n_books)s Libros, %(n_autor)s Autores, "
+"%(n_editorial)s Editoriales "
+msgstr ""
+
+#: biblioteca/templates/_includes/_footer_principal.html:7
+#, python-format
+msgid " Usuario logueado: %(user_logged)s "
+msgstr ""
+
+#: biblioteca/templates/_includes/_footer_principal.html:11
+#, python-format
+msgid ""
+" Todos los derechos reservados %(current_year)s - Conquer Blocks, Todos los "
+"derechos reservados  "
+msgstr ""
+
+#: biblioteca/templates/_includes/_menu_principal.html:7
+msgid "Biblioteca"
+msgstr ""
+
+#: biblioteca/templates/_includes/_menu_principal.html:17
+msgid "Inicio"
+msgstr ""
+
+#: biblioteca/templates/_includes/_menu_principal.html:22
+msgid "Autores"
+msgstr ""
+
+#: biblioteca/templates/_includes/_menu_principal.html:27
+#: biblioteca/templates/libros/LibroDetail.html:5
+msgid "Libros"
+msgstr ""
+
+#: biblioteca/templates/_includes/_menu_principal.html:32
+msgid "Editoriales"
+msgstr ""
+
+#: biblioteca/templates/_includes/_menu_principal.html:37
+msgid "Buscar"
+msgstr ""
+
+#: biblioteca/templates/_includes/_menu_principal.html:42
+msgid "Contacto"
+msgstr ""
+
+#: biblioteca/templates/_includes/_menu_principal.html:78
+msgid "Login"
+msgstr ""
+
+#: biblioteca/templates/autores/AutorDetail.html:4
+msgid "Página detalle de Autor"
+msgstr ""
+
+#: biblioteca/templates/autores/AutorDetail.html:5
+msgid "Autor"
+msgstr ""
+
+#: biblioteca/templates/autores/AutorDetail.html:9
+msgid "Nombre del autor"
+msgstr ""
+
+#: biblioteca/templates/autores/AutorDetail.html:10
+msgid "ID del Autor"
+msgstr ""
+
+#: biblioteca/templates/autores/AutorDetail.html:11
+msgid "Fecha de nacimiento"
+msgstr ""
+
+#: biblioteca/templates/autores/AutorDetail.html:15
+#: biblioteca/templates/editoriales/EditorialDetail.html:17
+#: biblioteca/templates/libros/LibroDetail.html:16
+msgid "Editar"
+msgstr ""
+
+#: biblioteca/templates/autores/AutorDetail.html:15
+#: biblioteca/templates/editoriales/EditorialDetail.html:21
+#: biblioteca/templates/libros/LibroDetail.html:16
+msgid "Eliminar"
+msgstr ""
+
+#: biblioteca/templates/autores/AutorDetail.html:18
+#: biblioteca/templates/editoriales/EditorialDetail.html:24
+#: biblioteca/templates/libros/LibroDetail.html:19
+msgid "Volver a la"
+msgstr ""
+
+#: biblioteca/templates/autores/AutorDetail.html:18
+#: biblioteca/templates/autores/AutorDetail.html:21
+msgid "lista de autores"
+msgstr ""
+
+#: biblioteca/templates/autores/AutorDetail.html:20
+msgid "Autor no encontrado"
+msgstr ""
+
+#: biblioteca/templates/autores/AutorDetail.html:21
+#: biblioteca/templates/editoriales/EditorialDetail.html:27
+#: biblioteca/templates/libros/LibroDetail.html:22
+msgid "Puedes probar de nuevo en la"
+msgstr ""
+
+#: biblioteca/templates/editoriales/EditorialDetail.html:4
+msgid "Página detalle de Editorial"
+msgstr ""
+
+#: biblioteca/templates/editoriales/EditorialDetail.html:5
+msgid "Editorial"
+msgstr ""
+
+#: biblioteca/templates/editoriales/EditorialDetail.html:10
+msgid "Nombre de la editorial"
+msgstr ""
+
+#: biblioteca/templates/editoriales/EditorialDetail.html:11
+msgid "Dirección de la editorial"
+msgstr ""
+
+#: biblioteca/templates/editoriales/EditorialDetail.html:12
+msgid "Email"
+msgstr ""
+
+#: biblioteca/templates/editoriales/EditorialDetail.html:13
+msgid "Fecha de fundación"
+msgstr ""
+
+#: biblioteca/templates/editoriales/EditorialDetail.html:24
+#: biblioteca/templates/editoriales/EditorialDetail.html:27
+msgid "lista de editoriales"
+msgstr ""
+
+#: biblioteca/templates/editoriales/EditorialDetail.html:26
+msgid "Editorial no encontrada"
+msgstr ""
+
+#: biblioteca/templates/general/home.html:4
+msgid "Página home"
+msgstr ""
+
+#: biblioteca/templates/general/home.html:5
+msgid "Bienvenido a nuestra página"
+msgstr ""
+
+#: biblioteca/templates/general/home.html:8
+msgid "Este es el contenido de la página home"
+msgstr ""
+
+#: biblioteca/templates/general/layout.html:8
+#: biblioteca/templates/general/layout.html:40
+msgid "Título base"
+msgstr ""
+
+#: biblioteca/templates/libros/LibroDetail.html:4
+msgid "Página de Libros"
+msgstr ""
+
+#: biblioteca/templates/libros/LibroDetail.html:9
+msgid "Nombre del libro"
+msgstr ""
+
+#: biblioteca/templates/libros/LibroDetail.html:10
+msgid "ISBN"
+msgstr ""
+
+#: biblioteca/templates/libros/LibroDetail.html:11
+msgid "Fecha de publicación"
+msgstr ""
+
+#: biblioteca/templates/libros/LibroDetail.html:12
+msgid "Número de páginas"
+msgstr ""
+
+#: biblioteca/templates/libros/LibroDetail.html:19
+#: biblioteca/templates/libros/LibroDetail.html:22
+msgid "lista de libros"
+msgstr ""
+
+#: biblioteca/templates/libros/LibroDetail.html:21
+msgid "Libro no encontrado"
+msgstr ""

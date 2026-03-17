@@ -8,6 +8,7 @@ from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
+from django.utils.translation import gettext as _
 
 
 
@@ -33,7 +34,7 @@ class LibroCreateView(SuccessMessageMixin, CreateView):
     form_class = LibroModelFormCreate
     template_name = 'libros/LibroCreate.html'
     success_url = reverse_lazy('libro:list')
-    success_message = 'El libro se ha creado correctamente'
+    success_message = _('El libro se ha creado correctamente')
 
 
 @method_decorator(login_required, name="dispatch")
@@ -43,7 +44,7 @@ class LibroUpdateView(SuccessMessageMixin, UpdateView):
     form_class = LibroModelFormCreate
     template_name = 'libros/LibroUpdate.html'
     success_url = reverse_lazy('libro:list')
-    success_message = 'El libro se ha actualizado correctamente'
+    success_message = _('El libro se ha actualizado correctamente')
 
 
 @method_decorator(login_required, name="dispatch")
@@ -52,5 +53,4 @@ class LibroDeleteView(SuccessMessageMixin, DeleteView):
     model = Libro
     template_name = 'libros/LibroDelete.html'
     success_url = reverse_lazy('libro:list')
-    success_message = 'El libro se ha eliminado correctamente'
-
+    success_message = _('El libro se ha eliminado correctamente')

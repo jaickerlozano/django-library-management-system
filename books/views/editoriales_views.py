@@ -9,6 +9,7 @@ from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
 from books.decorators import user_can_delete_editorial
 from django.contrib.messages.views import SuccessMessageMixin
+from django.utils.translation import gettext as _
 
 
 class EditorialListView(ListView):
@@ -31,7 +32,7 @@ class EditorialCreateView(SuccessMessageMixin, CreateView):
     form_class = EditorialModelFormCreate
     template_name = 'editoriales/EditorialCreate.html'
     success_url = reverse_lazy('editorial:list')
-    success_message = 'La editorial se ha creado correctamente'
+    success_message = _('La editorial se ha creado correctamente')
 
     def form_valid(self, form):
         """Asigna el usuario actual como creador de la editorial antes de guardar."""
@@ -48,7 +49,7 @@ class EditorialUpdateView(SuccessMessageMixin, UpdateView):
     form_class = EditorialModelFormCreate
     template_name = 'editoriales/EditorialUpdate.html'
     success_url = reverse_lazy('editorial:list')
-    success_message = 'La editorial se ha actualizado correctamente'
+    success_message = _('La editorial se ha actualizado correctamente')
 
 @method_decorator(user_can_delete_editorial, name="dispatch")
 class EditorialDeleteView(SuccessMessageMixin, DeleteView):
@@ -56,5 +57,4 @@ class EditorialDeleteView(SuccessMessageMixin, DeleteView):
     model = Editorial
     template_name = 'editoriales/EditorialDelete.html'
     success_url = reverse_lazy('editorial:list')
-    success_message = 'La editorial se ha eliminado correctamente'
-
+    success_message = _('La editorial se ha eliminado correctamente')

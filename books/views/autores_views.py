@@ -10,6 +10,7 @@ from books.forms.autor_forms import AutorModelFormCreate
 from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
+from django.utils.translation import gettext as _
 
 
 class AutorListView(ListView):
@@ -38,13 +39,13 @@ class AutorCreateView(CreateView):
     # Muestra un mensaje global de éxito al usuario
     def form_valid(self, form):
         """Maneja el envío exitoso del formulario y muestra un mensaje de éxito."""
-        messages.success(self.request, 'El autor se ha creado correctamente')
+        messages.success(self.request, _('El autor se ha creado correctamente'))
         return super().form_valid(form)
     
     # Muestra un mensaje global de error al usuario
     def form_invalid(self, form):
         """Maneja el envío fallido del formulario y muestra un mensaje de error."""
-        messages.error(self.request, 'Hubo un error. Revisa los datos ingresados.')
+        messages.error(self.request, _('Hubo un error. Revisa los datos ingresados.'))
         return super().form_invalid(form)
 
 
@@ -55,7 +56,7 @@ class AutorUpdateView(SuccessMessageMixin, UpdateView):
     form_class = AutorModelFormCreate
     template_name = 'autores/AutorUpdate.html'
     success_url = reverse_lazy('autor:list')
-    success_message = 'El autor se ha actualizado correctamente' # Uso de SuccessMessageMixin para simplificar el envío de mensajes de éxito
+    success_message = _('El autor se ha actualizado correctamente') # Uso de SuccessMessageMixin para simplificar el envío de mensajes de éxito
 
 
 @method_decorator(login_required, name="dispatch") # Restringe el acceso solo a usuarios autenticados
@@ -64,6 +65,4 @@ class AutorDeleteView(SuccessMessageMixin, DeleteView):
     model = Autor
     template_name = 'autores/AutorDelete.html'
     success_url = reverse_lazy('autor:list')
-    success_message = 'El autor se ha eliminado correctamente'
-    
-
+    success_message = _('El autor se ha eliminado correctamente')

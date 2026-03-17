@@ -1,6 +1,7 @@
 from django import forms
 from django.forms import ModelForm
 from books.models import Autor
+from django.utils.translation import gettext_lazy as _
 
 
 class AutorModelFormCreate(ModelForm):
@@ -13,6 +14,6 @@ class AutorModelFormCreate(ModelForm):
         }
         error_messages = {
             'fecha_nacimiento': {
-                'invalid': 'Formato incorrecto. Usa DD/MM/AAAA.',
+                'invalid': _('Formato incorrecto. Usa DD/MM/AAAA.'),
             },
         }

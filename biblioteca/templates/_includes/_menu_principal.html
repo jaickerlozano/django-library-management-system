@@ -1,24 +1,98 @@
 {% load i18n %}
-    <ul>
-        <li><a href="{% url 'home' %}">{% trans 'Inicio' %}</a></li>
-        <li><a href="{% url 'autor:list' %}">{% trans "Autores" %}</a></li>
-        <li><a href="{% url 'libro:list' %}">{% trans "Libros" %}</a></li>
-        <li><a href="{% url 'editorial:list' %}">{% trans "Editoriales" %}</a></li>
-        <li><a href="{% url 'search' %}">{% trans "Buscar" %}</a></li>
-        <li><a href="{% url 'contacto' %}">{% trans "Contacto" %}</a></li>
 
-        {% if user.is_authenticated %}
-            <li>{% trans "Usuario logueado" %}: {{ user.username }}</li>
-        {% endif %}
-    </ul>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4 shadow">
+    <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center" href="{% url 'home' %}">
+            <i class="bi bi-book-half me-2"></i>
+            {% trans "Biblioteca" %}
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-    <!-- Esta sección es para mostrar los mensajes usando messages de django-->
-    {% if messages %}
-        <section class="messages">
-            <ul>
-                {% for message in messages %}
-                    <li class="message {{ message.tags }}"> {{ message}} - {% trans "Categoría" %}: {{ message.tags }} </li>
-                {% endfor %}
+        <div class="collapse navbar-collapse" id="navbarMain">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link {% if request.resolver_match.url_name == 'home' %}active{% endif %}" href="{% url 'home' %}">
+                        <i class="bi bi-house-door me-1"></i>{% trans "Inicio" %}
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {% if 'autor' in request.resolver_match.app_name %}active{% endif %}" href="{% url 'autor:list' %}">
+                        <i class="bi bi-person-badge me-1"></i>{% trans "Autores" %}
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {% if 'libro' in request.resolver_match.app_name %}active{% endif %}" href="{% url 'libro:list' %}">
+                        <i class="bi bi-journal-text me-1"></i>{% trans "Libros" %}
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {% if 'editorial' in request.resolver_match.app_name %}active{% endif %}" href="{% url 'editorial:list' %}">
+                        <i class="bi bi-building me-1"></i>{% trans "Editoriales" %}
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {% if request.resolver_match.url_name == 'search' %}active{% endif %}" href="{% url 'search' %}">
+                        <i class="bi bi-search me-1"></i>{% trans "Buscar" %}
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {% if request.resolver_match.url_name == 'contacto' %}active{% endif %}" href="{% url 'contacto' %}">
+                        <i class="bi bi-envelope me-1"></i>{% trans "Contacto" %}
+                    </a>
+                </li>
             </ul>
-        </section>
-    {% endif %}
+
+            <div class="d-flex align-items-center">
+                <!-- Selector de Idiomas -->
+                <form action="{% url 'set_language' %}" method="post" class="me-3">
+                    {% csrf_token %}
+                    <input type="hidden" name="next" value="{{ request.path }}">
+                    <div class="input-group input-group-sm">
+                        <span class="input-group-text bg-secondary text-white border-secondary">
+                            <i class="bi bi-translate"></i>
+                        </span>
+                        <select name="language" class="form-select form-select-sm bg-dark text-white border-secondary shadow-none" onchange="this.form.submit()">
+                            {% get_current_language as LANGUAGE_CODE %}
+                            {% get_available_languages as AVAILABLE_LANGUAGES %}
+                            {% for lang_code, lang_name in AVAILABLE_LANGUAGES %}
+                                <option value="{{ lang_code }}" {% if LANGUAGE_CODE == lang_code %}selected{% endif %}>
+                                    {{ lang_name }}
+                                </option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                </form>
+
+                {% if user.is_authenticated %}
+                    <span class="navbar-text text-white me-2">
+                        <i class="bi bi-person-circle me-1 text-info"></i>
+                        {{ user.username }}
+                    </span>
+                    <a href="{% url 'admin:logout' %}?next={% url 'home' %}" class="btn btn-outline-danger btn-sm">
+                        <i class="bi bi-box-arrow-right"></i>
+                    </a>
+                {% else %}
+                    <a href="{% url 'admin:login' %}?next={% url 'home' %}" class="btn btn-outline-light btn-sm">
+                        {% trans "Login" %}
+                    </a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- Sección de Mensajes -->
+{% if messages %}
+    <div class="container mt-2">
+        {% for message in messages %}
+            <div class="alert alert-{{ message.tags|default:'info' }} alert-dismissible fade show shadow-sm" role="alert">
+                <i class="bi {% if message.tags == 'success' %}bi-check-circle{% elif message.tags == 'error' %}bi-exclamation-triangle{% else %}bi-info-circle{% endif %} me-2"></i>
+                {{ message }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        {% endfor %}
+    </div>
+{% endif %}
+

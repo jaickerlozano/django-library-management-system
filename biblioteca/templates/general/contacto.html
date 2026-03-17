@@ -1,13 +1,14 @@
 {% extends 'general/layout.html' %}
+{% load i18n %}
 
-{% block head_title %}Página de contacto{% endblock%}
-{% block page_title %}Contacta con nosotros{% endblock%}
+{% block head_title %}{% trans "Contacto" %} - {% trans "Biblioteca" %}{% endblock%}
+{% block page_title %}{% trans "Contacta con nosotros" %}{% endblock%}
 
 {% block page_content %}
     <form method="post">
         {% csrf_token %}
         {{ formulario.as_p }}
-        <button type="submit">Enviar</button>
+        <button type="submit" class="btn btn-primary">{% trans "Enviar" %}</button>
     </form>
-    <p>Escríbenos a <a href="mailto:jlozano.devcode@gmail.com">jlozano.devcode@gmail.com</a></p>
+    <p>{% trans "Escríbenos a" %} <a href="mailto:jlozano.devcode@gmail.com">jlozano.devcode@gmail.com</a></p>
 {% endblock %}

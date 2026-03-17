@@ -1,14 +1,35 @@
 {% extends 'general/layout.html' %}
+{% load i18n %}
 
-{% block head_title %}Página de Libros{% endblock%}
-{% block page_title %}Libros{% endblock%}
+{% block head_title %}{% trans "Eliminar Libro" %} - {{ libro.titulo }}{% endblock %}
+{% block page_title %}{% trans "Confirmar Eliminación" %}{% endblock %}
 
 {% block page_content %}
-    <h2>¿Seguro que quieres eliminar el libro {{ libro.titulo }}?</h2>
-    <form action="" method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Eliminar Libro</button>
-        <a href="{% url 'libro:detail' libro.pk%}">Cancelar</a>
-    </form>
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card border-0 shadow-sm">
+            <div class="card-body p-5 text-center">
+                <div class="text-danger mb-4">
+                    <i class="bi bi-trash3-fill display-1"></i>
+                </div>
+                <h2 class="h4 mb-3">{% trans "¿Retirar libro del catálogo?" %}</h2>
+                <p class="text-muted mb-4">
+                    {% blocktrans %} Está a punto de eliminar permanentemente <strong>{{ libro.titulo }}</strong>. Esta acción no se puede deshacer y el registro desaparecerá de la base de datos. {% endblocktrans %}
+                </p>
+
+                <form action="" method="post">
+                    {% csrf_token %}
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-danger btn-lg">
+                            <i class="bi bi-trash me-2"></i>{% trans "Confirmar Eliminación" %}
+                        </button>
+                        <a href="{% url 'libro:detail' libro.pk %}" class="btn btn-outline-secondary">
+                            {% trans "Cancelar y Volver" %}
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}

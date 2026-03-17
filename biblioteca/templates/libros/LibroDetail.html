@@ -1,25 +1,97 @@
 {% extends 'general/layout.html' %}
 {% load i18n %}
 
-{% block head_title %}{% trans "Página de Libros" %}{% endblock%}
-{% block page_title %}{% trans "Libros" %}{% endblock%}
+{% block head_title %}{{ libro.titulo }} - {% trans "Detalle de Libro" %}{% endblock %}
+{% block page_title %}{% trans "Información del Libro" %}{% endblock %}
 
 {% block page_content %}
-    {% if libro %}
-        <h2>{% trans "Nombre del libro" %}: {{ libro.titulo }} </h2>
-        <p>{% trans "ISBN" %}: {{ libro.isbn }} </p>
-        <p>{% trans "Fecha de publicación" %}: {{ libro.fecha_publicacion|date:'d/m/y' }} </p>
-        <p>{% trans "Número de páginas" %}: {{ libro.numero_paginas }} </p>
-        <!-- En este bloque estoy validando que primero esté logueado el usuario para que puedan aparecer los botones de editar y eliminar -->
-        {% if user.is_authenticated %}
-            <p>
-                <a href="{% url 'libro:update' libro.pk %}">{% trans "Editar" %}</a> - <a href="{% url 'libro:delete' libro.pk %}">{% trans "Eliminar" %}</a>
-            </p>
-        {% endif %}
-        <p>{% trans "Volver a la" %} <a href="{% url 'libro:list' %}">{% trans "lista de libros" %}</a>.</p>
-    {% else %}
-        <p>{% trans "Libro no encontrado" %}</p>
-        <p>{% trans "Puedes probar de nuevo en la" %} <a href="{% url 'libro:list' %}">{% trans "lista de libros" %}</a>.</p>
-    {% endif %}
+<div class="row justify-content-center">
+    <div class="col-lg-10">
+        {% if libro %}
+        <div class="card border-0 shadow-sm overflow-hidden">
+            <div class="row g-0">
+                <div class="col-md-4 bg-dark d-flex align-items-center justify-content-center p-5">
+                    <div class="text-center">
+                        <i class="bi bi-book-fill display-1 text-white opacity-25"></i>
+                        <h4 class="text-white mt-3">{{ libro.titulo }}</h4>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body p-4 p-lg-5">
+                        <div class="d-flex justify-content-between align-items-start mb-4">
+                            <div>
+                                <h2 class="h3 fw-bold mb-1">{{ libro.titulo }}</h2>
+                                <p class="text-primary h5 mb-0">
+                                    {% for autor in libro.autores.all %}
+                                        <a href="{% url 'autor:detail' autor.pk %}" class="text-decoration-none">{{ autor.nombre }}</a>{% if not forloop.last %}, {% endif %}
+                                    {% endfor %}
+                                </p>
+                            </div>
+                            {% if libro.is_out_of_stock %}
+                                <span class="badge bg-danger p-2">{% trans "Agotado" %}</span>
+                            {% else %}
+                                <span class="badge bg-success p-2">{% trans "En Stock" %}</span>
+                            {% endif %}
+                        </div>
 
+                        <div class="row g-4 mb-4">
+                            <div class="col-sm-6">
+                                <div class="p-3 bg-light rounded">
+                                    <small class="text-muted d-block">{% trans "ISBN" %}</small>
+                                    <span class="fw-bold">{{ libro.isbn }}</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="p-3 bg-light rounded">
+                                    <small class="text-muted d-block">{% trans "Fecha de publicación" %}</small>
+                                    <span class="fw-bold">{{ libro.fecha_publicacion|date:'d/m/Y' }}</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="p-3 bg-light rounded">
+                                    <small class="text-muted d-block">{% trans "Número de páginas" %}</small>
+                                    <span class="fw-bold">{{ libro.numero_paginas }}</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="p-3 bg-light rounded">
+                                    <small class="text-muted d-block">{% trans "Editorial" %}</small>
+                                    <span class="fw-bold">
+                                        {% if libro.editorial %}
+                                            <a href="{% url 'editorial:detail' libro.editorial.pk %}" class="text-decoration-none">{{ libro.editorial.nombre }}</a>
+                                        {% else %}
+                                            {% trans "N/A" %}
+                                        {% endif %}
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="d-flex gap-2 border-top pt-4 mt-4">
+                            {% if user.is_authenticated %}
+                                <a href="{% url 'libro:update' libro.pk %}" class="btn btn-warning px-4">
+                                    <i class="bi bi-pencil me-2"></i>{% trans "Editar" %}
+                                </a>
+                                <a href="{% url 'libro:delete' libro.pk %}" class="btn btn-danger px-4">
+                                    <i class="bi bi-trash me-2"></i>{% trans "Eliminar" %}
+                                </a>
+                            {% endif %}
+                            <a href="{% url 'libro:list' %}" class="btn btn-outline-secondary px-4 ms-auto">
+                                <i class="bi bi-arrow-left me-2"></i>{% trans "Volver al catálogo" %}
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% else %}
+        <div class="alert alert-warning shadow-sm border-0" role="alert">
+            <h4 class="alert-heading"><i class="bi bi-search me-2"></i>{% trans "Libro no encontrado" %}</h4>
+            <p>{% trans "Lo sentimos, el ejemplar solicitado no se encuentra en nuestra base de datos." %}</p>
+            <hr>
+            <a href="{% url 'libro:list' %}" class="btn btn-warning">{% trans "Ir al catálogo" %}</a>
+        </div>
+        {% endif %}
+    </div>
+</div>
 {% endblock %}

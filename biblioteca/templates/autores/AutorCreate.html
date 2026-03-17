@@ -1,21 +1,40 @@
 {% extends 'general/layout.html' %}
+{% load i18n %}
+{% load crispy_forms_tags %}
 
-{% block head_title %}Página de Autores{% endblock%}
-{% block page_title %}Autores{% endblock%}
+{% block head_title %}{% trans "Nuevo Autor" %} - {% trans "Biblioteca" %}{% endblock %}
+{% block page_title %}{% trans "Gestión de Autores" %}{% endblock %}
 
 {% block page_content %}
-    <h2>Nuevo Autor</h2>
-    <form action="" method="post">
-        {% csrf_token %}
-        <div class="message error"> {{ form.fecha_nacimiento.errors }} </div>
-        {{ form.as_p }}
+<div class="row justify-content-center">
+    <div class="col-md-8 col-lg-6">
+        <div class="card border-0 shadow-sm">
+            <div class="card-header bg-success text-white py-3">
+                <h2 class="h5 mb-0 text-center"><i class="bi bi-person-plus me-2"></i>{% trans "Registrar Nuevo Autor" %}</h2>
+            </div>
+            <div class="card-body p-4">
+                <form action="" method="post" novalidate>
+                    {% csrf_token %}
+                    
+                    {% if form.errors %}
+                        <div class="alert alert-danger mb-4">
+                            <i class="bi bi-exclamation-octagon me-2"></i>{% trans "Por favor corrija los errores abajo." %}
+                        </div>
+                    {% endif %}
 
-        {% comment %} {% if autor.fecha_nacimiento == 'invalid' %} {% endcomment %}
-            
-        {% comment %} {% endif %} {% endcomment %}
+                    {{ form|crispy }}
 
-        <button type="submit">Crear Autor</button>
-        <a href="{% url 'autor:list' %}">Cancelar</a>
-    </form>
-
+                    <div class="d-grid gap-2 mt-4">
+                        <button type="submit" class="btn btn-success btn-lg">
+                            <i class="bi bi-check-circle me-2"></i>{% trans "Crear Autor" %}
+                        </button>
+                        <a href="{% url 'autor:list' %}" class="btn btn-outline-secondary">
+                            {% trans "Cancelar" %}
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}

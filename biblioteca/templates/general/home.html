@@ -1,9 +1,63 @@
 {% extends 'general/layout.html' %}
 {% load i18n %}
 
-{% block head_title %}{% trans "Página home" %}{% endblock%}
-{% block page_title %}{% trans "Bienvenido a nuestra página" %}{% endblock%}
+{% block head_title %}{% trans "Inicio" %} - {% trans "Biblioteca" %}{% endblock %}
+{% block page_title %}{% trans "Bienvenido a la Biblioteca" %}{% endblock %}
 
 {% block page_content %}
-    <p>{% trans "Este es el contenido de la página home" %}</p>
+<div class="row g-4 justify-content-center">
+    <!-- Card Libros -->
+    <div class="col-md-4">
+        <div class="card h-100 border-0 shadow-sm text-center p-4">
+            <div class="card-body">
+                <div class="display-1 text-primary mb-3">
+                    <i class="bi bi-journal-text"></i>
+                </div>
+                <h3 class="card-title h4">{% trans "Libros" %}</h3>
+                <p class="card-text text-muted">{% trans "Explora nuestra amplia colección de títulos de diversos géneros y autores." %}</p>
+                <a href="{% url 'libro:list' %}" class="btn btn-outline-primary stretched-link">{% trans "Ver Libros" %}</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Card Autores -->
+    <div class="col-md-4">
+        <div class="card h-100 border-0 shadow-sm text-center p-4">
+            <div class="card-body">
+                <div class="display-1 text-success mb-3">
+                    <i class="bi bi-person-badge"></i>
+                </div>
+                <h3 class="card-title h4">{% trans "Autores" %}</h3>
+                <p class="card-text text-muted">{% trans "Conoce a las mentes brillantes detrás de tus historias favoritas." %}</p>
+                <a href="{% url 'autor:list' %}" class="btn btn-outline-success stretched-link">{% trans "Ver Autores" %}</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Card Editoriales -->
+    <div class="col-md-4">
+        <div class="card h-100 border-0 shadow-sm text-center p-4">
+            <div class="card-body">
+                <div class="display-1 text-warning mb-3">
+                    <i class="bi bi-building"></i>
+                </div>
+                <h3 class="card-title h4">{% trans "Editoriales" %}</h3>
+                <p class="card-text text-muted">{% trans "Descubre las casas editoriales que hacen posible la difusión del conocimiento." %}</p>
+                <a href="{% url 'editorial:list' %}" class="btn btn-outline-warning stretched-link">{% trans "Ver Editoriales" %}</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-5">
+    <div class="col-12 text-center">
+        <div class="bg-white p-5 rounded shadow-sm">
+            <h2 class="h3 mb-4">{% trans "¿Buscas algo en específico?" %}</h2>
+            <p class="lead text-muted mb-4">{% trans "Utiliza nuestra herramienta de búsqueda para encontrar rápidamente lo que necesitas." %}</p>
+            <a href="{% url 'search' %}" class="btn btn-primary btn-lg px-5">
+                <i class="bi bi-search me-2"></i>{% trans "Ir a Búsqueda" %}
+            </a>
+        </div>
+    </div>
+</div>
 {% endblock %}

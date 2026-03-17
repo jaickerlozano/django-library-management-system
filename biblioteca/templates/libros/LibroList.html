@@ -1,19 +1,63 @@
 {% extends 'general/layout.html' %}
+{% load i18n %}
 
-{% block head_title %}Página de Libros{% endblock%}
-{% block page_title %}Libros{% endblock%}
+{% block head_title %}{% trans "Libros" %} - {% trans "Biblioteca" %}{% endblock %}
+{% block page_title %}{% trans "Catálogo de Libros" %}{% endblock %}
 
 {% block page_content %}
-    <h2>Menú de Libros</h2>
-    <ul>
-        <li><a href="{% url 'libro:create' %}">Nuevo Libro</a></li>
-    </ul>
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h2 class="h3 mb-0 text-secondary">{% trans "Nuestra Colección" %}</h2>
+    {% if user.is_authenticated %}
+    <a href="{% url 'libro:create' %}" class="btn btn-primary shadow-sm">
+        <i class="bi bi-plus-circle me-1"></i>{% trans "Nuevo Libro" %}
+    </a>
+    {% endif %}
+</div>
 
-    <hr>
-    <h2>Lista completa de Libros</h2>
-    <ul>
-        {% for libro in libros %}
-            <li><a href="{% url 'libro:detail' libro.pk %}"> {{ libro.titulo }} </a></li>
-        {% endfor %}
-    </ul>
+<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+    {% for libro in libros %}
+    <div class="col">
+        <div class="card h-100 border-0 shadow-sm">
+            <div class="position-absolute top-0 end-0 p-2">
+                {% if libro.is_out_of_stock %}
+                <span class="badge bg-danger">{% trans "Agotado" %}</span>
+                {% else %}
+                <span class="badge bg-success">{% trans "Disponible" %}</span>
+                {% endif %}
+            </div>
+            <div class="card-body pt-4">
+                <div class="text-center mb-3">
+                    <i class="bi bi-book-half display-4 text-primary opacity-50"></i>
+                </div>
+                <h5 class="card-title text-center mb-1 text-truncate" title="{{ libro.titulo }}">{{ libro.titulo }}</h5>
+                <p class="card-text text-center text-muted small mb-3">
+                    {% for autor in libro.autores.all %}
+                        {{ autor.nombre }}{% if not forloop.last %}, {% endif %}
+                    {% endfor %}
+                </p>
+                
+                <div class="border-top pt-3">
+                    <div class="d-flex justify-content-between small text-muted mb-2">
+                        <span><i class="bi bi-calendar-check me-1"></i>{{ libro.fecha_publicacion|date:"Y" }}</span>
+                        <span><i class="bi bi-layers me-1"></i>{{ libro.numero_paginas }} {% trans "pág." %}</span>
+                    </div>
+                </div>
+
+                <div class="d-grid gap-2 mt-3">
+                    <a href="{% url 'libro:detail' libro.pk %}" class="btn btn-outline-primary btn-sm">
+                        <i class="bi bi-info-circle me-1"></i>{% trans "Ver detalles" %}
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% empty %}
+    <div class="col-12 text-center py-5">
+        <div class="bg-white p-5 rounded shadow-sm">
+            <i class="bi bi-journal-x display-1 text-muted mb-3"></i>
+            <p class="lead text-muted">{% trans "No se encontraron libros en el catálogo." %}</p>
+        </div>
+    </div>
+    {% endfor %}
+</div>
 {% endblock %}

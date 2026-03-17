@@ -1,14 +1,34 @@
 {% extends 'general/layout.html' %}
+{% load i18n %}
+{% load crispy_forms_tags %}
 
-{% block head_title %}Página de Libros{% endblock%}
-{% block page_title %}Libros{% endblock%}
+{% block head_title %}{% trans "Editar Libro" %} - {{ libro.titulo }}{% endblock %}
+{% block page_title %}{% trans "Actualizar Información" %}{% endblock %}
 
 {% block page_content %}
-    <h2>Editar Libro</h2>
-    <form action="" method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Actualizar Libro</button>
-        <a href="{% url 'libro:detail' libro.pk%}">Cancelar</a>
-    </form>
+<div class="row justify-content-center">
+    <div class="col-md-10 col-lg-8">
+        <div class="card border-0 shadow-sm">
+            <div class="card-header bg-warning py-3">
+                <h2 class="h5 mb-0 text-center"><i class="bi bi-pencil-square me-2"></i>{% trans "Modificar Detalles del Libro" %}</h2>
+            </div>
+            <div class="card-body p-4 p-lg-5">
+                <form action="" method="post" novalidate>
+                    {% csrf_token %}
+                    
+                    {{ form|crispy }}
+
+                    <div class="d-grid gap-2 mt-4 d-md-flex justify-content-md-end">
+                        <a href="{% url 'libro:detail' libro.pk %}" class="btn btn-outline-secondary px-4">
+                            {% trans "Cancelar" %}
+                        </a>
+                        <button type="submit" class="btn btn-warning btn-lg px-5 fw-bold">
+                            <i class="bi bi-check2-circle me-2"></i>{% trans "Actualizar Libro" %}
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}

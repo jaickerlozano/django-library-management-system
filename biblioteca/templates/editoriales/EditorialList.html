@@ -1,19 +1,47 @@
 {% extends 'general/layout.html' %}
+{% load i18n %}
 
-{% block head_title %}Página de Editoriales{% endblock%}
-{% block page_title %}Editoriales{% endblock%}
+{% block head_title %}{% trans "Editoriales" %} - {% trans "Biblioteca" %}{% endblock %}
+{% block page_title %}{% trans "Nuestras Editoriales" %}{% endblock %}
 
 {% block page_content %}
-    <h2>Lista completa de Editoriales</h2>
-    <ul>
-        <li><a href="{% url 'editorial:create' %}">Nueva Editorial</a></li>
-    </ul>
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h2 class="h3 mb-0 text-secondary">{% trans "Socios Editoriales" %}</h2>
+    {% if user.is_authenticated %}
+    <a href="{% url 'editorial:create' %}" class="btn btn-warning shadow-sm">
+        <i class="bi bi-building-add me-1"></i>{% trans "Nueva Editorial" %}
+    </a>
+    {% endif %}
+</div>
 
-    <hr>
-
-    <ul>
-        {% for editorial in editoriales %}
-            <li><a href="{% url 'editorial:detail' editorial.pk %}"> {{ editorial.nombre }} </a></li>
-        {% endfor %}
-    </ul>
+<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+    {% for editorial in editoriales %}
+    <div class="col">
+        <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body">
+                <div class="d-flex align-items-center mb-3">
+                    <div class="bg-light rounded p-3 me-3 text-warning">
+                        <i class="bi bi-building h3 mb-0"></i>
+                    </div>
+                    <div>
+                        <h5 class="card-title mb-1">{{ editorial.nombre }}</h5>
+                        <p class="card-text text-muted small">
+                            <i class="bi bi-geo-alt me-1"></i>{{ editorial.direccion|truncatechars:30 }}
+                        </p>
+                    </div>
+                </div>
+                <div class="mt-auto">
+                    <a href="{% url 'editorial:detail' editorial.pk %}" class="btn btn-sm btn-outline-warning w-100">
+                        <i class="bi bi-info-circle me-1"></i>{% trans "Ver Perfil" %}
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% empty %}
+    <div class="col-12 text-center py-5">
+        <p class="text-muted">{% trans "No hay editoriales registradas." %}</p>
+    </div>
+    {% endfor %}
+</div>
 {% endblock %}

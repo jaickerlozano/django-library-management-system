@@ -1,15 +1,29 @@
 {% extends 'general/layout.html' %}
+{% load i18n %}
+{% load crispy_forms_tags %}
 
-{% block head_title %}Página de Editoriales{% endblock%}
-{% block page_title %}Editoriales{% endblock%}
+{% block head_title %}{% trans "Crear Editorial" %} - {% trans "Biblioteca" %}{% endblock%}
+{% block page_title %}{% trans "Editoriales" %}{% endblock%}
 
 {% block page_content %}
-    <h2>Nueva Editorial</h2>
+    <h2>{% trans "Nueva Editorial" %}</h2>
     <form action="" method="post">
         {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Crear Editorial</button>
-        <a href="{% url 'editorial:list' %}">Cancelar</a>
+        <div class="row">   
+            <div class="col-12 col-sm-6">
+                {{ form.nombre|as_crispy_field }}
+                {{ form.direccion|as_crispy_field }}
+                {{ form.email|as_crispy_field }}
+            </div>
+            <div class="col-12 col-sm-6">
+                {{ form.fecha_fundacion|as_crispy_field }}
+                {{ form.level|as_crispy_field }}
+                {{ form.sitio_web|as_crispy_field }}
+            </div>
+        </div>
+        <!-- {{ form|crispy }} -->
+        <button type="submit" class="btn btn-secondary">{% trans "Crear Editorial" %}</button>
+        <a href="{% url 'editorial:list' %}" class="btn btn-link">{% trans "Cancelar" %}</a>
     </form>
 
 {% endblock %}

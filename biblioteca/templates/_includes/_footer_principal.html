@@ -1,12 +1,59 @@
-{% load i18n %} <!-- Esto es necesario para poder cargar la librería de i18n-->
-    <section>
-        <p> {% blocktrans %} Actualmente tenemos: {{ n_books }} Libros, {{ n_autor }} Autores, {{ n_editorial }} Editoriales {% endblocktrans %}</p>
-    </section>
+{% load i18n %}
+<footer class="bg-dark text-white pt-5 pb-4 mt-auto">
+    <div class="container text-center text-md-start">
+        <div class="row text-center text-md-start">
+            <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mt-3">
+                <h5 class="text-uppercase mb-4 font-weight-bold text-primary">{% trans "Biblioteca Virtual" %}</h5>
+                <p>{% trans "Tu portal para gestionar y descubrir libros, autores y editoriales de forma sencilla y eficiente." %}</p>
+            </div>
 
-    <section>
-        <p>{% blocktrans %} Usuario logueado: {{ user_logged }} {% endblocktrans %}</p>
-    </section>
-    
-    <footer>
-        <p> {% blocktrans %} Todos los derechos reservados {{ current_year }} - Conquer Blocks, Todos los derechos reservados  {% endblocktrans %} </p>
-    </footer>
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                <h5 class="text-uppercase mb-4 font-weight-bold text-primary">{% trans "Estadísticas" %}</h5>
+                <p>
+                    <i class="bi bi-book me-2"></i>{% trans "Libros" %}: {{ n_books|default:"0" }}
+                </p>
+                <p>
+                    <i class="bi bi-person me-2"></i>{% trans "Autores" %}: {{ n_autor|default:"0" }}
+                </p>
+                <p>
+                    <i class="bi bi-building me-2"></i>{% trans "Editoriales" %}: {{ n_editorial|default:"0" }}
+                </p>
+            </div>
+
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                <h5 class="text-uppercase mb-4 font-weight-bold text-primary">{% trans "Contacto" %}</h5>
+                <p>
+                    <i class="bi bi-envelope me-2"></i> info@biblioteca.com
+                </p>
+                <p>
+                    <i class="bi bi-geo-alt me-2"></i> {% trans "Sede Central, Digital" %}
+                </p>
+            </div>
+        </div>
+
+        <hr class="mb-4">
+
+        <div class="row align-items-center">
+            <div class="col-md-7 col-lg-8">
+                <p>
+                    {% blocktrans %} Todos los derechos reservados &copy; {{ current_year }} - Conquer Blocks {% endblocktrans %}
+                </p>
+            </div>
+            <div class="col-md-5 col-lg-4">
+                <div class="text-center text-md-end">
+                    <ul class="list-unstyled list-inline">
+                        <li class="list-inline-item">
+                            <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="bi bi-facebook"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="bi bi-twitter-x"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="bi bi-instagram"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>

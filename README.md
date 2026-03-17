@@ -1,68 +1,62 @@
 # Django Modular Library Management System
 
-A robust and modular Library Management System built with **Django 3.2**. This project demonstrates a clean architecture approach, focusing on scalability, code organization, and advanced form handling.
+A robust and modular Library Management System built with **Django 5.2**. This project demonstrates a clean architecture approach, focusing on scalability, code organization, advanced form handling, and full internationalization.
 
 ## 🚀 Key Features
 
 *   **Catalog Management:** Complete CRUD (Create, Read, Update, Delete) operations for Books (*Libros*), Authors (*Autores*), and Publishers (*Editoriales*).
 *   **Advanced Search:** Global search functionality filtering across multiple models simultaneously.
-*   **Robust Validation:** Custom business logic implemented directly in Django Forms.
+*   **Full Internationalization (i18n):** Complete support for **English** and **Spanish**, covering both static UI elements and dynamic database content.
 *   **Modular Architecture:** Refactored codebase separating concerns for better maintainability.
+*   **AI-Enhanced Development:** Built and maintained using the **Engram Memory System** and **Multi-agent Ecosistem** designed by **Alan Buscaglia**, enabling precise context management and complex task orchestration.
 
 ## 🛠️ Technical Highlights & Refactoring
 
-This project goes beyond the basics by implementing professional coding standards and architectural patterns:
+### 1. Advanced Internationalization (i18n) & Localization (l10n)
+The project implements a comprehensive translation strategy:
+*   **Static Strings:** Using Django's `gettext` and `gettext_lazy` for all UI labels, form fields, and messages.
+*   **Dynamic Content:** Integration of `django-modeltranslation` to manage multilingual data in the database (e.g., translated biographies, titles, and genre descriptions).
+*   **Language Switcher:** A dynamic UI component that allows users to toggle between languages while maintaining the current context.
 
-### 1. Modular Architecture (Refactoring)
-Instead of a monolithic `views.py` or `urls.py`, the application has been refactored for scalability:
-*   **Split Views:** Logic is separated into specific modules (e.g., `books/views/autor_views.py`, `books/views/libro_views.py`) rather than one giant file.
-*   **Organized URLs:** URL configurations are decoupled and organized by domain entities within `books/urls/`.
-*   **Template Structure:** A clean, inherited template system using `_includes` for components like navigation.
+### 2. Modular Architecture
+*   **Split Views & URLs:** Logic and routing are decoupled and organized by domain entities (e.g., `books/views/autores_views.py`, `books/urls/autor_url.py`).
+*   **Clean Templates:** A hierarchical template system with reusable components in `_includes`.
 
-### 2. Advanced Form Handling
-Data integrity is ensured through Django's `ModelForm` and `Form` classes with custom validations:
-*   **Custom Validators:** Implementation of `clean_<field>` methods to enforce business rules (e.g., minimum character length, restricted words in emails).
-*   **Widget Customization:** Enhanced UX using specific widgets (e.g., `SelectDateWidget` for publication dates).
-*   **Feedback Loops:** Clear error messaging passed from the backend to the template layer.
+### 3. AI-Driven Orchestration (Buscaglia System)
+This project leverages cutting-edge AI orchestration patterns:
+*   **Engram Memory:** Persistent context management that ensures architectural decisions and technical specs are tracked across development sessions.
+*   **Multi-agent Ecosystem:** Specialized agents (Codebase Investigator, SDD Spec, SDD Design, etc.) working in coordination to implement features with high technical integrity.
 
 ## 💻 Tech Stack
 
-*   **Backend:** Python 3.x, Django 3.2
-*   **Database:** SQLite (Development)
-*   **Utilities:** Django Debug Toolbar, Django Extensions
-*   **Frontend:** Django Templates (DTL), HTML5, CSS3
+*   **Backend:** Python 3.x, Django 5.2
+*   **Database:** PostgreSQL (with `psycopg2-binary`)
+*   **i18n:** Django Internationalization, `django-modeltranslation`
+*   **Orchestration:** Buscaglia's Engram & Multi-agent System
+*   **Frontend:** Django Templates (DTL), HTML5, CSS3, Bootstrap 5
 
 ## ⚙️ Installation & Setup
 
-Follow these steps to run the project locally:
-
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/tu-usuario/django-modular-library.git
-    cd django-modular-library
+    git clone https://github.com/jaickerlozano/django-library-management-system.git
+    cd django-library-management-system
     ```
 
-2.  **Create and activate a virtual environment:**
-    ```bash
-    python -m venv env
-    # Windows
-    .\env\Scripts\activate
-    # macOS/Linux
-    source env/bin/activate
-    ```
-
-3.  **Install dependencies:**
+2.  **Install dependencies:**
     ```bash
     pip install -r requirements.txt
     ```
 
-4.  **Apply migrations:**
+3.  **Setup Localization:**
     ```bash
-    python manage.py migrate
+    python manage.py makemessages -l en -l es
+    python manage.py compilemessages
     ```
 
-5.  **Run the development server:**
+4.  **Apply migrations & Run:**
     ```bash
+    python manage.py migrate
     python manage.py runserver
     ```
 
@@ -71,16 +65,18 @@ Follow these steps to run the project locally:
 ```text
 biblioteca/
 ├── books/
-│   ├── forms/          # Custom forms with validations
-│   ├── models/         # Database models
-│   ├── views/          # Modularized views (Autor, Libro)
-│   └── urls/           # Decoupled URL configurations
-├── templates/
-│   ├── _includes/      # Reusable components (Navbar, etc.)
-│   ├── autores/        # Author-specific templates
-│   └── libros/         # Book-specific templates
+│   ├── forms/          # Localized forms with validations
+│   ├── models/         # Database models with translation registration
+│   ├── views/          # Modularized and localized views
+│   └── translation.py  # Model translation registration
+├── locale/             # Translation catalogs (PO/MO files)
+├── biblioteca/
+│   ├── templates/      # Clean template system with i18n support
+│   └── settings.py     # Multi-language & DB configuration
 └── manage.py
+```
 
-📧 Contact
-Project developed by Jaicker Lozano. 
-Feel free to reach out for any inquiries regarding Django development.
+---
+📧 **Contact**
+Project developed by **Jaicker Lozano**. 
+Powered by the innovative systems of **Alan Buscaglia**.
